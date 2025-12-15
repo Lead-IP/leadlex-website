@@ -5,6 +5,9 @@ import html2canvas from 'html2canvas';
 
 export default function LinkedInBanner() {
   const bannerRef = useRef(null);
+  const logoWhiteRef = useRef(null);
+  const logoColorRef = useRef(null);
+  const iconRef = useRef(null);
 
   const downloadBanner = async () => {
     if (bannerRef.current) {
@@ -17,6 +20,22 @@ export default function LinkedInBanner() {
       
       const link = document.createElement('a');
       link.download = 'leadlex-linkedin-banner.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+  };
+
+  const downloadLogo = async (ref, filename, width, height) => {
+    if (ref.current) {
+      const canvas = await html2canvas(ref.current, {
+        scale: 3,
+        backgroundColor: null,
+        width,
+        height
+      });
+      
+      const link = document.createElement('a');
+      link.download = filename;
       link.href = canvas.toDataURL('image/png');
       link.click();
     }
