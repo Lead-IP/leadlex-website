@@ -35,73 +35,70 @@ export default function HeroSection() {
           className="absolute bottom-20 left-[5%] w-[300px] h-[300px] bg-white/5 rounded-3xl backdrop-blur-sm"
         />
         
-        {/* Abstract UI Preview */}
+        {/* Dashboard Cards Preview */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
-          className="absolute right-[8%] top-1/2 -translate-y-1/2 hidden lg:block"
+          className="absolute right-[5%] top-1/2 -translate-y-1/2 hidden lg:block"
         >
-          <div className="relative">
-            <div className="w-[420px] h-[320px] bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 rounded-full bg-white/30" />
-                <div className="w-3 h-3 rounded-full bg-white/20" />
-                <div className="w-3 h-3 rounded-full bg-white/10" />
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/20" />
-                  <div className="flex-1 space-y-2">
-                    <div className="w-32 h-3 bg-white/25 rounded-full" />
-                    <div className="w-24 h-2 bg-white/15 rounded-full" />
-                  </div>
-                  <div className="w-16 h-6 bg-[#fb8628]/60 rounded-full" />
+          <div className="relative space-y-4">
+            {/* Card 1 - Add Contact */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="w-[380px] bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-6 shadow-2xl"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-400/30 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-lg bg-blue-500/40" />
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/15" />
-                  <div className="flex-1 space-y-2">
-                    <div className="w-40 h-3 bg-white/20 rounded-full" />
-                    <div className="w-20 h-2 bg-white/10 rounded-full" />
-                  </div>
-                  <div className="w-16 h-6 bg-white/20 rounded-full" />
+                <div className="flex-1 space-y-2">
+                  <div className="w-28 h-3 bg-white/30 rounded-full" />
+                  <div className="w-40 h-2 bg-white/20 rounded-full" />
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-white/10" />
-                  <div className="flex-1 space-y-2">
-                    <div className="w-28 h-3 bg-white/15 rounded-full" />
-                    <div className="w-32 h-2 bg-white/10 rounded-full" />
-                  </div>
-                  <div className="w-16 h-6 bg-white/15 rounded-full" />
+                <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
+                  <div className="w-1 h-4 bg-white/40 rounded-full" />
                 </div>
               </div>
-              <div className="mt-6 pt-4 border-t border-white/10">
-                <div className="flex justify-between items-center">
-                  <div className="w-20 h-2 bg-white/20 rounded-full" />
-                  <div className="flex gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-white/10" />
-                    <div className="w-8 h-8 rounded-lg bg-white/10" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            </motion.div>
             
-            {/* Floating Card */}
+            {/* Card 2 - Add Deal */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="absolute -bottom-8 -left-12 w-[180px] bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-2xl"
+              className="w-[380px] bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-6 shadow-2xl"
             >
-              <div className="flex items-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#033934] to-[#3f7a6c]" />
-                <div className="space-y-1">
-                  <div className="w-16 h-2 bg-gray-200 rounded-full" />
-                  <div className="w-12 h-1.5 bg-gray-100 rounded-full" />
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-[#fb8628]/30 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-lg bg-[#fb8628]/40" />
+                </div>
+                <div className="flex-1 space-y-2">
+                  <div className="w-24 h-3 bg-white/30 rounded-full" />
+                  <div className="w-36 h-2 bg-white/20 rounded-full" />
+                </div>
+                <div className="w-16 h-7 rounded-lg bg-[#fb8628]/40 backdrop-blur-sm" />
+              </div>
+            </motion.div>
+            
+            {/* Card 3 - Add Note */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="w-[380px] bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-6 shadow-2xl"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-green-400/30 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-lg bg-green-500/40" />
+                </div>
+                <div className="flex-1 space-y-2">
+                  <div className="w-32 h-3 bg-white/30 rounded-full" />
+                  <div className="w-44 h-2 bg-white/20 rounded-full" />
                 </div>
               </div>
-              <div className="text-xs text-gray-500">Follow-up due</div>
-              <div className="text-sm font-semibold text-[#033934]">Tomorrow, 9:00 AM</div>
             </motion.div>
           </div>
         </motion.div>
