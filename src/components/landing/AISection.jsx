@@ -1,8 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Bell, Lightbulb, Database } from 'lucide-react';
+import { Sparkles, Bell, Lightbulb, Database, Search } from 'lucide-react';
 
 const aiFeatures = [
+  {
+    icon: Search,
+    title: 'AI Prospector',
+    description: 'Search 250M+ contacts and companies for conference prep, roadshows, and relationship refreshes'
+  },
   {
     icon: Bell,
     title: 'Flags dormant mandates',

@@ -6,7 +6,8 @@ import {
   Users, 
   Target, 
   FileText, 
-  Calendar 
+  Calendar,
+  Search 
 } from 'lucide-react';
 
 const capabilities = [
@@ -27,6 +28,12 @@ const capabilities = [
     title: 'Relationship Ownership',
     description: 'See who owns each client relationship, how active it is, and where coverage gaps exist — without exposing sensitive data.',
     visual: 'ownership'
+  },
+  {
+    icon: Search,
+    title: 'AI Prospector',
+    description: 'Access over 250 million contacts and companies instantly. Find anyone for conference prep, roadshows, or refreshing old relationships — with emails, LinkedIn, and more.',
+    visual: 'prospector'
   },
   {
     icon: Target,
@@ -80,6 +87,20 @@ const VisualElement = ({ type }) => {
           <div className="w-8 h-8 rounded-full bg-[#fb8628]/20 border-2 border-white" />
         </div>
         <div className="flex-1 h-2 rounded-full bg-gradient-to-r from-[#033934]/30 to-[#3f7a6c]/10" />
+      </div>
+    ),
+    prospector: (
+      <div className="space-y-2">
+        <div className="flex items-center gap-2 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-2 border border-gray-200">
+          <div className="w-4 h-4 rounded bg-[#033934]/20" />
+          <div className="flex-1 h-2 bg-gray-200 rounded" />
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="h-10 bg-gradient-to-br from-[#3f7a6c]/10 to-[#3f7a6c]/5 rounded-lg border border-[#3f7a6c]/20" />
+          <div className="h-10 bg-gradient-to-br from-[#3f7a6c]/10 to-[#3f7a6c]/5 rounded-lg border border-[#3f7a6c]/20" />
+          <div className="h-10 bg-gradient-to-br from-[#fb8628]/10 to-[#fb8628]/5 rounded-lg border border-[#fb8628]/20" />
+          <div className="h-10 bg-gradient-to-br from-[#3f7a6c]/10 to-[#3f7a6c]/5 rounded-lg border border-[#3f7a6c]/20" />
+        </div>
       </div>
     ),
     ai: (
