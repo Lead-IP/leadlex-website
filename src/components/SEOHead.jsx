@@ -1,6 +1,13 @@
 import { useEffect } from 'react';
 
-export default function SEOHead({ title, description, keywords }) {
+export default function SEOHead({ 
+  title, 
+  description, 
+  keywords, 
+  canonicalUrl,
+  ogImage = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png',
+  structuredData 
+}) {
   useEffect(() => {
     // Set page title
     document.title = title;
@@ -25,14 +32,28 @@ export default function SEOHead({ title, description, keywords }) {
       metaKeywords.content = keywords;
     }
     
+    // Set canonical URL
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+      }
+      canonical.href = canonicalUrl;
+    }
+    
     // Set Open Graph tags
     const ogTags = [
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
-      { property: 'og:type', content: 'website' }
+      { property: 'og:type', content: 'website' },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:url', content: canonicalUrl || window.location.href }
     ];
     
     ogTags.forEach(({ property, content }) => {
+      if (!content) return;
       let tag = document.querySelector(`meta[property="${property}"]`);
       if (!tag) {
         tag = document.createElement('meta');
@@ -46,10 +67,12 @@ export default function SEOHead({ title, description, keywords }) {
     const twitterTags = [
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description }
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: ogImage }
     ];
     
     twitterTags.forEach(({ name, content }) => {
+      if (!content) return;
       let tag = document.querySelector(`meta[name="${name}"]`);
       if (!tag) {
         tag = document.createElement('meta');
@@ -58,7 +81,18 @@ export default function SEOHead({ title, description, keywords }) {
       }
       tag.content = content;
     });
-  }, [title, description, keywords]);
+    
+    // Set structured data (JSON-LD)
+    if (structuredData) {
+      let script = document.querySelector('script[type="application/ld+json"]');
+      if (!script) {
+        script = document.createElement('script');
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(structuredData);
+    }
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   
   return null;
 }

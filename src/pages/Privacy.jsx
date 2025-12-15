@@ -9,6 +9,7 @@ export default function Privacy() {
         title="Privacy Policy - LeadLex by Lead IP GmbH"
         description="LeadLex Privacy Policy. Learn how we process and protect your data in accordance with GDPR and applicable data protection laws."
         keywords="privacy policy, GDPR compliance, data protection, legal software privacy"
+        canonicalUrl="https://www.leadlex.com/privacy"
       />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">

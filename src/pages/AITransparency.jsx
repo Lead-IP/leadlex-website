@@ -11,6 +11,7 @@ export default function AITransparency() {
         title="AI Transparency & Explainability Notice - LeadLex"
         description="Learn how LeadLex uses AI technology for legal business development. Transparent, explainable, and under your control."
         keywords="AI transparency, explainable AI, legal AI, AI ethics, AI in law firms"
+        canonicalUrl="https://www.leadlex.com/ai-transparency"
       />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">

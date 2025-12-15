@@ -105,6 +105,55 @@ export default function Pricing() {
         title="LeadLex Pricing - Plans for Law Firms | Solo to Organization"
         description="Transparent pricing for law firm CRM. Plans from $49/month for solo practitioners to $499/month for teams. Includes mandate tracking, AI prospecting, and relationship management."
         keywords="law firm CRM pricing, legal software pricing, business development software cost, law firm subscription"
+        canonicalUrl="https://www.leadlex.com/pricing"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "LeadLex",
+          "description": "Business development platform for IP, M&A, and corporate law firms",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Solo Plan",
+              "price": "49",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "billingDuration": "P1M"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Basic Plan",
+              "price": "119",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "billingDuration": "P1M"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Pro Plan",
+              "price": "199",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "billingDuration": "P1M"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Organization Plan",
+              "price": "499",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "billingDuration": "P1M"
+              }
+            }
+          ]
+        }}
       />
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">

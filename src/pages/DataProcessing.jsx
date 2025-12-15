@@ -9,6 +9,7 @@ export default function DataProcessing() {
         title="Data Processing Agreement (DPA) - LeadLex"
         description="LeadLex Data Processing Agreement pursuant to Art. 28 GDPR. Review our data processing terms and security measures."
         keywords="data processing agreement, DPA, GDPR Art 28, data processor agreement"
+        canonicalUrl="https://www.leadlex.com/data-processing"
       />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
