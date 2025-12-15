@@ -4,22 +4,25 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "LeadLex finally gives us a clear picture of our mandate pipeline without feeling like a sales tool.",
-    author: "Partner",
-    firm: "Corporate Law Firm",
-    initials: "JM"
+    quote: "I've always felt the need for a tool tailored specifically for the legal community, and that's exactly what LeadLex provides.",
+    author: "Patrick Schnyder",
+    position: "Managing Partner",
+    firm: "Wild Schnyder",
+    initials: "PS"
   },
   {
-    quote: "We stopped losing track of follow-ups after conferences within the first weeks.",
-    author: "IP Practice Lead",
-    firm: "International IP Firm",
-    initials: "SK"
+    quote: "During our LinkedIn based sales leads project we especially appreciated the great flexibility and constructive cooperation to make this joint endeavor a success.",
+    author: "Alexander Müller",
+    position: "Director of Business Development",
+    firm: "Maiwald GmbH",
+    initials: "AM"
   },
   {
-    quote: "Simple enough for partners, structured enough for the firm.",
-    author: "Managing Partner",
-    firm: "M&A Boutique",
-    initials: "RH"
+    quote: "LeadLex helped us become a truly data-driven company and achieve a proper data foundation, key for our business development purposes.",
+    author: "Laura Moreno",
+    position: "Head of Business Development",
+    firm: "Moeller IP Advisors",
+    initials: "LM"
   }
 ];
 
@@ -45,7 +48,7 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl md:text-4xl font-semibold text-[#033934] leading-tight"
           >
-            What firms say
+            What Our Clients Are Saying
           </motion.h2>
         </div>
         
@@ -77,6 +80,9 @@ export default function TestimonialsSection() {
                   <div>
                     <p className="font-semibold text-[#033934]">
                       {testimonial.author}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      {testimonial.position}
                     </p>
                     <p className="text-sm text-gray-500">
                       {testimonial.firm}
