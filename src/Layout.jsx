@@ -8,7 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'How it works', href: '#how-it-works' },
-  { label: 'Security', href: '#security' }
+  { label: 'Security', href: '#security' },
+  { label: 'Pricing', href: createPageUrl('Pricing') }
 ];
 
 export default function Layout({ children }) {
@@ -66,15 +67,27 @@ export default function Layout({ children }) {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
-                    isScrolled ? 'text-gray-600 hover:text-[#033934]' : 'text-white/80 hover:text-white'
-                  }`}
-                >
-                  {link.label}
-                </a>
+                link.href.startsWith('#') ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
+                      isScrolled ? 'text-gray-600 hover:text-[#033934]' : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
+                      isScrolled ? 'text-gray-600 hover:text-[#033934]' : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
             
@@ -120,14 +133,25 @@ export default function Layout({ children }) {
             >
               <div className="px-6 py-6 space-y-4">
                 {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block text-gray-600 font-medium py-2 hover:text-[#033934] transition-colors"
-                  >
-                    {link.label}
-                  </a>
+                  link.href.startsWith('#') ? (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-gray-600 font-medium py-2 hover:text-[#033934] transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-gray-600 font-medium py-2 hover:text-[#033934] transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )
                 ))}
                 <div className="pt-4 border-t border-gray-100 space-y-3">
                   <Button 
@@ -180,6 +204,7 @@ export default function Layout({ children }) {
                 <li><a href="#features" className="text-white/60 hover:text-white transition-colors">Features</a></li>
                 <li><a href="#how-it-works" className="text-white/60 hover:text-white transition-colors">How it works</a></li>
                 <li><a href="#security" className="text-white/60 hover:text-white transition-colors">Security</a></li>
+                <li><Link to={createPageUrl('Pricing')} className="text-white/60 hover:text-white transition-colors">Pricing</Link></li>
               </ul>
             </div>
             
