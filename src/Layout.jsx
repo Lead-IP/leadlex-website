@@ -26,21 +26,6 @@ export default function Layout({ children }) {
   }, []);
 
   useEffect(() => {
-    // Google Analytics
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-PZCRGY7G93';
-    document.head.appendChild(gtagScript);
-
-    const gtagConfigScript = document.createElement('script');
-    gtagConfigScript.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PZCRGY7G93');
-    `;
-    document.head.appendChild(gtagConfigScript);
-
     // Google Tag Manager
     const gtmScript = document.createElement('script');
     gtmScript.innerHTML = `
