@@ -182,17 +182,17 @@ export default function HeroSection() {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/982845fff_Untitleddesign3.png"
                 alt="graulund consulting"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-14 w-auto brightness-0 invert"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/efbed030b_Untitleddesign2.png"
                 alt="Maiwald"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-14 w-auto brightness-0 invert"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
                 alt="Wild Schnyder"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-14 w-auto brightness-0 invert"
               />
             </div>
           </motion.div>
