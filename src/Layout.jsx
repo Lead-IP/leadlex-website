@@ -26,6 +26,15 @@ export default function Layout({ children }) {
   }, []);
 
   useEffect(() => {
+    // Set favicon
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+    link.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/70a0954c3_LeadLexfavicon.png';
+
     // Google Tag Manager
     const gtmScript = document.createElement('script');
     gtmScript.innerHTML = `
