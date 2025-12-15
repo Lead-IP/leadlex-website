@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SEOHead from '../components/SEOHead';
 
 const plans = [
   {
@@ -100,6 +101,11 @@ const faqs = [
 export default function Pricing() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="LeadLex Pricing - Plans for Law Firms | Solo to Organization"
+        description="Transparent pricing for law firm CRM. Plans from $49/month for solo practitioners to $499/month for teams. Includes mandate tracking, AI prospecting, and relationship management."
+        keywords="law firm CRM pricing, legal software pricing, business development software cost, law firm subscription"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">

@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 
 export default function Privacy() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Privacy Policy - LeadLex by Lead IP GmbH"
+        description="LeadLex Privacy Policy. Learn how we process and protect your data in accordance with GDPR and applicable data protection laws."
+        keywords="privacy policy, GDPR compliance, data protection, legal software privacy"
+      />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <motion.div

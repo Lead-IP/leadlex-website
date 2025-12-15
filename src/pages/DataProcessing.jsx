@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 
 export default function DataProcessing() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Data Processing Agreement (DPA) - LeadLex"
+        description="LeadLex Data Processing Agreement pursuant to Art. 28 GDPR. Review our data processing terms and security measures."
+        keywords="data processing agreement, DPA, GDPR Art 28, data processor agreement"
+      />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <motion.div

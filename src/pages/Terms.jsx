@@ -1,9 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEOHead from '../components/SEOHead';
 
 export default function Terms() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="Terms of Service - LeadLex"
+        description="LeadLex Terms of Service. Review our terms and conditions for using the LeadLex business development platform for law firms."
+        keywords="terms of service, legal terms, software agreement, B2B legal software terms"
+      />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <motion.div
