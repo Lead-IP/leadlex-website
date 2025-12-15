@@ -37,8 +37,8 @@ export default function Privacy() {
               <div className="bg-gray-50 rounded-xl p-6 mb-4">
                 <p className="text-gray-700 leading-relaxed mb-4">
                   <strong>Lead IP GmbH</strong><br />
-                  Thierschstraße 55 / Trogerstraße 50<br />
-                  80538 / 81675 München, Germany<br />
+                  Trogerstraße 50<br />
+                  81675 München, Germany<br />
                   Email: privacy@leadip.io
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-0">
