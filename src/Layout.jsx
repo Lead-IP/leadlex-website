@@ -219,6 +219,7 @@ export default function Layout({ children }) {
                 <li><a href="#" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
                 <li><Link to={createPageUrl('Privacy')} className="text-white/60 hover:text-white transition-colors">Privacy</Link></li>
                 <li><Link to={createPageUrl('Terms')} className="text-white/60 hover:text-white transition-colors">Terms</Link></li>
+                <li><Link to={createPageUrl('DataProcessing')} className="text-white/60 hover:text-white transition-colors">Data Processing (DPA)</Link></li>
               </ul>
             </div>
           </div>
@@ -230,6 +231,7 @@ export default function Layout({ children }) {
             <div className="flex gap-6">
               <Link to={createPageUrl('Terms')} className="text-white/40 hover:text-white text-sm transition-colors">Terms</Link>
               <Link to={createPageUrl('Privacy')} className="text-white/40 hover:text-white text-sm transition-colors">Privacy</Link>
+              <Link to={createPageUrl('DataProcessing')} className="text-white/40 hover:text-white text-sm transition-colors">DPA</Link>
             </div>
           </div>
         </div>
