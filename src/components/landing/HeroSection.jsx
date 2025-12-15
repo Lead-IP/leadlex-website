@@ -185,9 +185,9 @@ export default function HeroSection() {
                 className="h-8 w-auto"
               />
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/c51699f68_Untitleddesign1.png"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/86bf19688_Screenshot2025-12-15at155611.png"
                 alt="Maiwald"
-                className="h-20 w-auto"
+                className="h-8 w-auto"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/cc107fc9d_Screenshot2025-12-15at155546.png"
