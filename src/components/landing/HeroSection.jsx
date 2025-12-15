@@ -155,8 +155,9 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 font-medium px-8 py-6 text-base rounded-xl transition-all duration-300 bg-transparent"
+              asChild
             >
-              See how it works
+              <a href="#how-it-works">See how it works</a>
             </Button>
           </motion.div>
 
