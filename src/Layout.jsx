@@ -53,15 +53,12 @@ export default function Layout({ children }) {
         <nav className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#033934] to-[#3f7a6c] flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
-              </div>
-              <span className={`text-xl font-semibold transition-colors duration-300 ${
-                isScrolled ? 'text-[#033934]' : 'text-white'
-              }`}>
-                LeadLex
-              </span>
+            <Link to={createPageUrl('Home')} className="flex items-center">
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
+                alt="LeadLex"
+                className="h-8 w-auto"
+              />
             </Link>
             
             {/* Desktop Navigation */}
@@ -161,11 +158,12 @@ export default function Layout({ children }) {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">L</span>
-                </div>
-                <span className="text-xl font-semibold">LeadLex</span>
+              <div className="mb-4">
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
+                  alt="LeadLex"
+                  className="h-8 w-auto brightness-0 invert"
+                />
               </div>
               <p className="text-white/60 leading-relaxed max-w-sm">
                 Business development and relationship platform built specifically 
