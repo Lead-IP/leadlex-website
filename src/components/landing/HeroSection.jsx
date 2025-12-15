@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[110vh] flex items-center overflow-hidden">
       {/* Gradient Background */}
       <div 
         className="absolute inset-0"
@@ -158,6 +158,23 @@ export default function HeroSection() {
             >
               See how it works
             </Button>
+          </motion.div>
+
+          {/* Trusted By Logos */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.5 }}
+            className="mt-16"
+          >
+            <p className="text-white/60 text-sm uppercase tracking-wide mb-6">Trusted by</p>
+            <div className="flex items-center gap-8 opacity-90">
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e3edbf542_Screenshot2025-12-15at154529.png"
+                alt="Trusted law firms"
+                className="h-8 w-auto brightness-0 invert"
+              />
+            </div>
           </motion.div>
         </div>
       </div>
