@@ -168,10 +168,30 @@ export default function HeroSection() {
             className="mt-16"
           >
             <p className="text-white/60 text-sm uppercase tracking-wide mb-6">Trusted by</p>
-            <div className="flex items-center gap-8 opacity-90">
+            <div className="flex flex-wrap items-center gap-8 opacity-90">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e3edbf542_Screenshot2025-12-15at154529.png"
-                alt="Trusted law firms"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a590d6199_664de210b6699fae528c7460_Marksandclerklogosmall-p-500_edited.png"
+                alt="Marks & Clerk"
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/7452823c5_64f9d1a3b9f53f30bb73251b_21_edited.png"
+                alt="mceller"
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/8860cd607_Screenshot2025-12-15at155635.png"
+                alt="graulund consulting"
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/86bf19688_Screenshot2025-12-15at155611.png"
+                alt="Maiwald"
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/cc107fc9d_Screenshot2025-12-15at155546.png"
+                alt="Wild Schnyder"
                 className="h-8 w-auto brightness-0 invert"
               />
             </div>
