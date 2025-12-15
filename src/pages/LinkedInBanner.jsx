@@ -53,29 +53,33 @@ export default function LinkedInBanner() {
         ></div>
 
         {/* Content */}
-        <div className="relative h-full flex items-center px-20">
-          <div className="flex-1">
+        <div className="relative h-full flex items-center justify-between px-20">
+          {/* Left side - leave space for profile photo */}
+          <div className="w-64"></div>
+          
+          {/* Center content */}
+          <div className="flex-1 text-center">
             <img 
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
               alt="LeadLex"
-              className="h-16 w-auto brightness-0 invert mb-6"
+              className="h-14 w-auto brightness-0 invert mb-4 mx-auto"
             />
-            <h2 className="text-5xl font-semibold text-white mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Business Development<br />for Law Firms
+            <h2 className="text-4xl font-semibold text-white mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Business Development for Law Firms
             </h2>
-            <p className="text-xl text-white/80 max-w-2xl" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Relationship intelligence platform built for IP, M&A, and corporate law firms
+            <p className="text-lg text-white/80" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Relationship intelligence platform for IP, M&A, and corporate law firms
             </p>
           </div>
 
-          {/* Accent element */}
-          <div className="flex flex-col items-end space-y-4">
+          {/* Right side accent */}
+          <div className="flex flex-col items-end justify-center space-y-4">
             <div className="bg-[#fb8628] text-white px-8 py-4 rounded-xl shadow-2xl">
-              <p className="text-2xl font-semibold" style={{ fontFamily: 'Inter, sans-serif' }}>www.leadlex.com</p>
+              <p className="text-2xl font-semibold whitespace-nowrap" style={{ fontFamily: 'Inter, sans-serif' }}>www.leadlex.com</p>
             </div>
             <div className="flex gap-3">
-              <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-xl"></div>
-              <div className="w-20 h-20 bg-[#fb8628]/20 backdrop-blur-sm rounded-xl"></div>
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl"></div>
+              <div className="w-16 h-16 bg-[#fb8628]/20 backdrop-blur-sm rounded-xl"></div>
             </div>
           </div>
         </div>
