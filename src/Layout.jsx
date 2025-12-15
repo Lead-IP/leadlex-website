@@ -57,7 +57,9 @@ export default function Layout({ children }) {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
                 alt="LeadLex"
-                className="h-8 w-auto"
+                className={`h-8 w-auto transition-all duration-300 ${
+                  isScrolled ? '' : 'brightness-0 invert'
+                }`}
               />
             </Link>
             
