@@ -202,7 +202,7 @@ export default function Pricing() {
                   </div>
                 </div>
                 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-3 mb-6 min-h-[10rem]">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
@@ -215,11 +215,11 @@ export default function Pricing() {
                   ))}
                 </ul>
                 
-                {plan.additionalUser && (
-                  <div className={`text-xs mb-6 ${plan.highlighted ? 'text-white/70' : 'text-gray-500'}`}>
-                    Additional users: <span className="font-medium">{plan.additionalUser}</span>
-                  </div>
-                )}
+                <div className={`text-xs mb-6 h-5 flex items-center ${plan.highlighted ? 'text-white/70' : 'text-gray-500'}`}>
+                  {plan.additionalUser && (
+                    <>Additional users: <span className="font-medium ml-1">{plan.additionalUser}</span></>
+                  )}
+                </div>
                 
                 <p className={`text-sm mb-6 leading-relaxed ${plan.highlighted ? 'text-white/80' : 'text-gray-600'}`}>
                   {plan.description}
