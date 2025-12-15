@@ -168,31 +168,31 @@ export default function HeroSection() {
             className="mt-16"
           >
             <p className="text-white/60 text-sm uppercase tracking-wide mb-6">Trusted by</p>
-            <div className="flex flex-wrap items-center gap-8 opacity-90">
+            <div className="flex items-center gap-8 opacity-90">
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a590d6199_664de210b6699fae528c7460_Marksandclerklogosmall-p-500_edited.png"
                 alt="Marks & Clerk"
-                className="h-8 w-auto brightness-0 invert"
+                className="h-10 w-auto brightness-0 invert"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/7452823c5_64f9d1a3b9f53f30bb73251b_21_edited.png"
                 alt="mceller"
-                className="h-8 w-auto brightness-0 invert"
+                className="h-10 w-auto brightness-0 invert"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/982845fff_Untitleddesign3.png"
                 alt="graulund consulting"
-                className="h-12 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/efbed030b_Untitleddesign2.png"
                 alt="Maiwald"
-                className="h-16 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
                 alt="Wild Schnyder"
-                className="h-12 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
             </div>
           </motion.div>
