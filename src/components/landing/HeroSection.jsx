@@ -180,7 +180,7 @@ export default function HeroSection() {
                 className="h-8 w-auto brightness-0 invert"
               />
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/8860cd607_Screenshot2025-12-15at155635.png"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/982845fff_Untitleddesign3.png"
                 alt="graulund consulting"
                 className="h-8 w-auto"
               />
