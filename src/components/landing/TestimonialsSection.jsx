@@ -5,10 +5,10 @@ import { Quote } from 'lucide-react';
 const testimonials = [
   {
     quote: "I've always felt the need for a tool tailored specifically for the legal community, and that's exactly what LeadLex provides.",
-    author: "Patrick Schnyder",
+    author: "Donald Schnyder",
     position: "Managing Partner",
     firm: "Wild Schnyder",
-    initials: "PS"
+    initials: "DS"
   },
   {
     quote: "During our LinkedIn based sales leads project we especially appreciated the great flexibility and constructive cooperation to make this joint endeavor a success.",
