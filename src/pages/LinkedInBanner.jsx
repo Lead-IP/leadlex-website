@@ -5,9 +5,6 @@ import html2canvas from 'html2canvas';
 
 export default function LinkedInBanner() {
   const bannerRef = useRef(null);
-  const logoWhiteRef = useRef(null);
-  const logoColorRef = useRef(null);
-  const iconRef = useRef(null);
 
   const downloadBanner = async () => {
     if (bannerRef.current) {
@@ -25,35 +22,17 @@ export default function LinkedInBanner() {
     }
   };
 
-  const downloadLogo = async (ref, filename, width, height) => {
-    if (ref.current) {
-      const canvas = await html2canvas(ref.current, {
-        scale: 3,
-        backgroundColor: null,
-        width,
-        height
-      });
-      
-      const link = document.createElement('a');
-      link.download = filename;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8 gap-12">
-      {/* LinkedIn Banner */}
-      <div className="w-full max-w-7xl">
-        <div className="mb-4 text-center">
-          <h1 className="text-3xl font-semibold text-[#033934] mb-3">
-            LinkedIn Banner
-          </h1>
-          <Button onClick={downloadBanner} className="bg-[#033934] hover:bg-[#033934]/90">
-            <Download className="w-4 h-4 mr-2" />
-            Download Banner
-          </Button>
-        </div>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
+      <div className="mb-8">
+        <h1 className="text-3xl font-semibold text-[#033934] mb-4 text-center">
+          LinkedIn Banner
+        </h1>
+        <Button onClick={downloadBanner} className="bg-[#033934] hover:bg-[#033934]/90">
+          <Download className="w-4 h-4 mr-2" />
+          Download Banner
+        </Button>
+      </div>
 
       <div 
         ref={bannerRef}
@@ -117,111 +96,9 @@ export default function LinkedInBanner() {
         </div>
       </div>
 
-        <p className="text-gray-500 text-sm mt-4 text-center">
-          Banner dimensions: 1584 × 396 pixels (LinkedIn recommended size)
-        </p>
-      </div>
-
-      {/* Logo Variations */}
-      <div className="w-full max-w-7xl grid md:grid-cols-3 gap-8">
-        {/* White Logo on Green */}
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-[#033934] mb-3">
-            White Logo on Green
-          </h2>
-          <div 
-            ref={logoWhiteRef}
-            className="bg-[#033934] rounded-2xl p-12 flex items-center justify-center shadow-xl mb-4"
-            style={{ width: '400px', height: '400px' }}
-          >
-            <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
-              alt="LeadLex"
-              className="w-full h-auto brightness-0 invert"
-            />
-          </div>
-          <Button 
-            onClick={() => downloadLogo(logoWhiteRef, 'leadlex-logo-white.png', 400, 400)} 
-            className="bg-[#033934] hover:bg-[#033934]/90"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Download
-          </Button>
-        </div>
-
-        {/* Colored Logo with Background */}
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-[#033934] mb-3">
-            Logo with Background
-          </h2>
-          <div 
-            ref={logoColorRef}
-            className="relative rounded-2xl overflow-hidden shadow-xl mb-4"
-            style={{ 
-              width: '400px', 
-              height: '400px',
-              background: 'radial-gradient(ellipse at center, #044a43 0%, #033934 70%)'
-            }}
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="absolute top-12 right-12 w-32 h-32 border-2 border-[#fb8628]/20 rounded-lg transform rotate-12"></div>
-              <div className="absolute bottom-16 left-12 w-24 h-24 bg-[#fb8628]/10 rounded-full blur-xl"></div>
-              <div className="absolute top-20 left-20 w-16 h-16 border border-white/10 transform rotate-45"></div>
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
-                alt="LeadLex"
-                className="relative z-10 w-4/5 h-auto brightness-0 invert"
-              />
-            </div>
-          </div>
-          <Button 
-            onClick={() => downloadLogo(logoColorRef, 'leadlex-logo-background.png', 400, 400)} 
-            className="bg-[#033934] hover:bg-[#033934]/90"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Download
-          </Button>
-        </div>
-
-        {/* Icon/Favicon */}
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-[#033934] mb-3">
-            Icon / Favicon
-          </h2>
-          <div 
-            ref={iconRef}
-            className="relative rounded-2xl overflow-hidden shadow-xl mb-4 mx-auto"
-            style={{ 
-              width: '400px', 
-              height: '400px',
-              background: 'linear-gradient(135deg, #033934 0%, #044a43 100%)'
-            }}
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#fb8628]/20 rounded-full blur-2xl"></div>
-              <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#3f7a6c]/30 rounded-full blur-2xl"></div>
-              <div className="relative z-10 text-center">
-                <div className="text-white font-bold" style={{ fontSize: '180px', fontFamily: 'Inter, sans-serif', lineHeight: '1' }}>
-                  L
-                </div>
-                <div className="text-[#fb8628] font-bold" style={{ fontSize: '60px', fontFamily: 'Inter, sans-serif', marginTop: '-20px' }}>
-                  Lex
-                </div>
-              </div>
-            </div>
-          </div>
-          <Button 
-            onClick={() => downloadLogo(iconRef, 'leadlex-icon.png', 400, 400)} 
-            className="bg-[#033934] hover:bg-[#033934]/90"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Download
-          </Button>
-          <p className="text-gray-500 text-xs mt-2">
-            Perfect for website icons & social media
-          </p>
-        </div>
-      </div>
+      <p className="text-gray-500 text-sm mt-4 text-center">
+        Banner dimensions: 1584 × 396 pixels (LinkedIn recommended size)
+      </p>
     </div>
   );
 }
