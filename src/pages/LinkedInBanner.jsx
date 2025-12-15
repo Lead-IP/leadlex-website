@@ -42,16 +42,18 @@ export default function LinkedInBanner() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-semibold text-[#033934] mb-4 text-center">
-          LinkedIn Banner
-        </h1>
-        <Button onClick={downloadBanner} className="bg-[#033934] hover:bg-[#033934]/90">
-          <Download className="w-4 h-4 mr-2" />
-          Download Banner
-        </Button>
-      </div>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8 gap-12">
+      {/* LinkedIn Banner */}
+      <div className="w-full max-w-7xl">
+        <div className="mb-4 text-center">
+          <h1 className="text-3xl font-semibold text-[#033934] mb-3">
+            LinkedIn Banner
+          </h1>
+          <Button onClick={downloadBanner} className="bg-[#033934] hover:bg-[#033934]/90">
+            <Download className="w-4 h-4 mr-2" />
+            Download Banner
+          </Button>
+        </div>
 
       <div 
         ref={bannerRef}
