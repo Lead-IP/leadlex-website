@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[110vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[110vh] flex items-center overflow-hidden rounded-b-[60px]">
       {/* Gradient Background */}
       <div 
         className="absolute inset-0"
@@ -198,9 +198,6 @@ export default function HeroSection() {
           </motion.div>
         </div>
       </div>
-      
-      {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
