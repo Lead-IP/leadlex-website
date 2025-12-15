@@ -4,6 +4,7 @@ import { createPageUrl } from './utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import CookieBanner from './components/CookieBanner';
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -177,6 +178,9 @@ export default function Layout({ children }) {
       <main>
         {children}
       </main>
+
+      {/* Cookie Banner */}
+      <CookieBanner />
       
       {/* Footer */}
       <footer className="bg-[#033934] text-white">
@@ -213,7 +217,8 @@ export default function Layout({ children }) {
               <ul className="space-y-3">
                 <li><a href="#" className="text-white/60 hover:text-white transition-colors">About</a></li>
                 <li><a href="#" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Privacy</a></li>
+                <li><Link to={createPageUrl('Privacy')} className="text-white/60 hover:text-white transition-colors">Privacy</Link></li>
+                <li><Link to={createPageUrl('Terms')} className="text-white/60 hover:text-white transition-colors">Terms</Link></li>
               </ul>
             </div>
           </div>
@@ -223,9 +228,8 @@ export default function Layout({ children }) {
               © {new Date().getFullYear()} LeadLex. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Terms</a>
-              <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Privacy</a>
-              <a href="#" className="text-white/40 hover:text-white text-sm transition-colors">Cookies</a>
+              <Link to={createPageUrl('Terms')} className="text-white/40 hover:text-white text-sm transition-colors">Terms</Link>
+              <Link to={createPageUrl('Privacy')} className="text-white/40 hover:text-white text-sm transition-colors">Privacy</Link>
             </div>
           </div>
         </div>
