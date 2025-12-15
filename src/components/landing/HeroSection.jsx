@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, #033934 0%, #3f7a6c 100%)'
+          background: 'radial-gradient(circle at top left, #3f7a6c 0%, #033934 70%)'
         }}
       />
       
@@ -200,7 +200,7 @@ export default function HeroSection() {
       </div>
       
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
