@@ -220,6 +220,7 @@ export default function Layout({ children }) {
                 <li><Link to={createPageUrl('Privacy')} className="text-white/60 hover:text-white transition-colors">Privacy</Link></li>
                 <li><Link to={createPageUrl('Terms')} className="text-white/60 hover:text-white transition-colors">Terms</Link></li>
                 <li><Link to={createPageUrl('DataProcessing')} className="text-white/60 hover:text-white transition-colors">Data Processing (DPA)</Link></li>
+                <li><Link to={createPageUrl('AITransparency')} className="text-white/60 hover:text-white transition-colors">AI Transparency</Link></li>
               </ul>
             </div>
           </div>
@@ -232,6 +233,7 @@ export default function Layout({ children }) {
               <Link to={createPageUrl('Terms')} className="text-white/40 hover:text-white text-sm transition-colors">Terms</Link>
               <Link to={createPageUrl('Privacy')} className="text-white/40 hover:text-white text-sm transition-colors">Privacy</Link>
               <Link to={createPageUrl('DataProcessing')} className="text-white/40 hover:text-white text-sm transition-colors">DPA</Link>
+              <Link to={createPageUrl('AITransparency')} className="text-white/40 hover:text-white text-sm transition-colors">AI Notice</Link>
             </div>
           </div>
         </div>

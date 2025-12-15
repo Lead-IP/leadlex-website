@@ -3,6 +3,7 @@ import Pricing from './pages/Pricing';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import DataProcessing from './pages/DataProcessing';
+import AITransparency from './pages/AITransparency';
 import __Layout from './Layout.jsx';
 
 
@@ -12,6 +13,7 @@ export const PAGES = {
     "Terms": Terms,
     "Privacy": Privacy,
     "DataProcessing": DataProcessing,
+    "AITransparency": AITransparency,
 }
 
 export const pagesConfig = {
