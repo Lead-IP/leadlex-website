@@ -6,6 +6,7 @@ import HowItWorksSection from '../components/landing/HowItWorksSection';
 import AISection from '../components/landing/AISection';
 import SecuritySection from '../components/landing/SecuritySection';
 import TestimonialsSection from '../components/landing/TestimonialsSection';
+import FAQSection from '../components/landing/FAQSection';
 import ClosingCTA from '../components/landing/ClosingCTA';
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <SecuritySection />
       </div>
       <TestimonialsSection />
+      <FAQSection />
       <ClosingCTA />
     </div>
   );

@@ -46,12 +46,6 @@ const capabilities = [
     title: 'Event & Conference Mode',
     description: 'Fast, structured networking capture at events. Never lose a valuable connection made at a conference again.',
     visual: 'events'
-  },
-  {
-    icon: FileText,
-    title: 'Notes & History',
-    description: 'Tasks, notes, and relationship history in one system. Full context at your fingertips for every client interaction.',
-    visual: 'notes'
   }
 ];
 
