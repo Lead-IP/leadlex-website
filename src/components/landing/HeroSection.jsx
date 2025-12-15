@@ -187,7 +187,7 @@ export default function HeroSection() {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/c51699f68_Untitleddesign1.png"
                 alt="Maiwald"
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/cc107fc9d_Screenshot2025-12-15at155546.png"
