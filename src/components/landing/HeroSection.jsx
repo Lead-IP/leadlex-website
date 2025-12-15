@@ -190,9 +190,9 @@ export default function HeroSection() {
                 className="h-16 w-auto"
               />
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/cc107fc9d_Screenshot2025-12-15at155546.png"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
                 alt="Wild Schnyder"
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </div>
           </motion.div>
