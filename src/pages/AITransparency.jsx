@@ -2,10 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
+import SEOHead from '../components/SEOHead';
 
 export default function AITransparency() {
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="AI Transparency & Explainability Notice - LeadLex"
+        description="Learn how LeadLex uses AI technology for legal business development. Transparent, explainable, and under your control."
+        keywords="AI transparency, explainable AI, legal AI, AI ethics, AI in law firms"
+      />
       <section className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <motion.div
