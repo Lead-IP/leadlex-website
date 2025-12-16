@@ -160,17 +160,21 @@ export default function LinkedInBanner() {
             style={{ 
               width: '400px', 
               height: '400px',
-              background: 'radial-gradient(ellipse at center, #044a43 0%, #033934 70%)'
+              background: 'white'
             }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0">
               <div className="absolute top-12 right-12 w-32 h-32 border-2 border-[#fb8628]/20 rounded-lg transform rotate-12"></div>
               <div className="absolute bottom-16 left-12 w-24 h-24 bg-[#fb8628]/10 rounded-full blur-xl"></div>
-              <div className="absolute top-20 left-20 w-16 h-16 border border-white/10 transform rotate-45"></div>
+              <div className="absolute top-20 left-20 w-16 h-16 border border-[#033934]/10 transform rotate-45"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#fb8628]/10 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#033934]/10 rounded-full blur-2xl"></div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/e33d19a6b_leadlex.png"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/04badf6d2_leadlex.png"
                 alt="LeadLex"
-                className="relative z-10 w-4/5 h-auto brightness-0 invert"
+                className="relative z-10 w-4/5 h-auto"
               />
             </div>
           </div>
@@ -200,13 +204,25 @@ export default function LinkedInBanner() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute top-0 right-0 w-40 h-40 bg-[#fb8628]/20 rounded-full blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#3f7a6c]/30 rounded-full blur-2xl"></div>
-              <div className="relative z-10 text-center">
-                <div className="text-white font-bold" style={{ fontSize: '180px', fontFamily: 'Inter, sans-serif', lineHeight: '1' }}>
+              <div className="relative z-10 flex items-center" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <div className="text-white font-bold" style={{ fontSize: '120px', lineHeight: '1', letterSpacing: '-0.02em' }}>
                   L
                 </div>
-                <div className="text-[#fb8628] font-bold" style={{ fontSize: '60px', fontFamily: 'Inter, sans-serif', marginTop: '-20px' }}>
+                <div className="text-white font-bold" style={{ fontSize: '120px', lineHeight: '1', letterSpacing: '-0.02em' }}>
                   Lex
                 </div>
+                <svg width="90" height="90" viewBox="0 0 40 40" className="ml-2" style={{ marginBottom: '30px' }}>
+                  <path d="M10 25 L25 25 Q30 25 30 20 L30 5" 
+                        fill="none" 
+                        stroke="#fb8628" 
+                        strokeWidth="6" 
+                        strokeLinecap="round"/>
+                  <path d="M5 10 L20 10 Q25 10 25 15 L25 30" 
+                        fill="none" 
+                        stroke="#fb8628" 
+                        strokeWidth="6" 
+                        strokeLinecap="round"/>
+                </svg>
               </div>
             </div>
           </div>
