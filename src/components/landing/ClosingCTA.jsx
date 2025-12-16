@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import ContactDialog from '../ContactDialog';
 
 const benefits = [
   'Win more mandates',
@@ -10,7 +11,11 @@ const benefits = [
 ];
 
 export default function ClosingCTA() {
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
+  
   return (
+    <>
+      <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
     <section className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="relative overflow-hidden rounded-3xl">
@@ -76,6 +81,7 @@ export default function ClosingCTA() {
             >
               <Button 
                 size="lg"
+                onClick={() => setContactDialogOpen(true)}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-10 py-7 text-lg rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#fb8628]/30 hover:scale-105"
               >
                 Try LeadLex
@@ -94,5 +100,6 @@ export default function ClosingCTA() {
         </div>
       </div>
     </section>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Check, ArrowRight, Sparkles } from 'lucide-react';
@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import SEOHead from '../components/SEOHead';
+import ContactDialog from '../components/ContactDialog';
 
 const plans = [
   {
@@ -99,8 +100,11 @@ const faqs = [
 ];
 
 export default function Pricing() {
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
+  
   return (
     <div className="min-h-screen bg-white">
+      <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
       <SEOHead 
         title="LeadLex Pricing - Plans for Law Firms | Solo to Organization"
         description="Transparent pricing for law firm CRM. Plans from $49/month for solo practitioners to $499/month for teams. Includes mandate tracking, AI prospecting, and relationship management."
@@ -281,6 +285,7 @@ export default function Pricing() {
                 </p>
                 
                 <Button 
+                  onClick={() => setContactDialogOpen(true)}
                   className={`w-full ${
                     plan.highlighted
                       ? 'bg-[#fb8628] hover:bg-[#e5791f] text-white'
@@ -438,6 +443,7 @@ export default function Pricing() {
             </p>
             <Button 
               size="lg"
+              onClick={() => setContactDialogOpen(true)}
               className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-10 py-6 text-lg rounded-xl"
             >
               Try LeadLex

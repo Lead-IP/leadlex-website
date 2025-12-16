@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CookieBanner from './components/CookieBanner';
+import ContactDialog from './components/ContactDialog';
 
 const navLinks = [
   { label: 'Features', href: '#features' },
@@ -17,6 +18,7 @@ const navLinks = [
 export default function Layout({ children }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,6 +142,7 @@ export default function Layout({ children }) {
                 Sign in
               </Button>
               <Button 
+                onClick={() => setContactDialogOpen(true)}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-6 rounded-xl transition-all duration-300"
               >
                 Try LeadLex
@@ -206,6 +209,10 @@ export default function Layout({ children }) {
                     Sign in
                   </Button>
                   <Button 
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setContactDialogOpen(true);
+                    }}
                     className="w-full bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium"
                   >
                     Try LeadLex
@@ -225,6 +232,9 @@ export default function Layout({ children }) {
 
       {/* Cookie Banner */}
       <CookieBanner />
+
+      {/* Contact Dialog */}
+      <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
       
       {/* Footer */}
       <footer className="bg-[#033934] text-white">

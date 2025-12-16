@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import ContactDialog from '../ContactDialog';
 
 export default function HeroSection() {
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
+  
   return (
+    <>
+      <ContactDialog open={contactDialogOpen} onOpenChange={setContactDialogOpen} />
     <section className="relative min-h-[110vh] flex items-center overflow-hidden rounded-b-[60px] pt-24 md:pt-0">
       {/* Gradient Background */}
       <div 
@@ -143,9 +148,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4"
-          >
+            >
             <Button 
               size="lg"
+              onClick={() => setContactDialogOpen(true)}
               className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-8 py-6 text-base rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#fb8628]/20"
             >
               Try LeadLex
@@ -252,7 +258,8 @@ export default function HeroSection() {
             </div>
           </motion.div>
         </div>
-      </div>
-    </section>
-  );
-}
+        </div>
+        </section>
+        </>
+        );
+        }
