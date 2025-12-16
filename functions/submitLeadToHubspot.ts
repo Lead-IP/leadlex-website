@@ -15,11 +15,15 @@ Deno.serve(async (req) => {
         firstname: name.split(' ')[0] || name,
         lastname: name.split(' ').slice(1).join(' ') || '',
         company: company,
-        message: message,
         hs_lead_status: 'NEW',
         lifecyclestage: 'lead'
       }
     };
+    
+    // Add message to notes field if provided
+    if (message) {
+      contactData.properties.hs_note = message;
+    }
 
     const response = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
       method: 'POST',
