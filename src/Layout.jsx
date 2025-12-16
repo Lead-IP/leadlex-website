@@ -10,7 +10,8 @@ const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Security', href: '#security' },
-  { label: 'Pricing', href: createPageUrl('Pricing') }
+  { label: 'Pricing', href: createPageUrl('Pricing') },
+  { label: 'Contact', href: createPageUrl('Contact') }
 ];
 
 export default function Layout({ children }) {
@@ -139,9 +140,10 @@ export default function Layout({ children }) {
                 Sign in
               </Button>
               <Button 
+                onClick={() => window.location.href = createPageUrl('Contact')}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-6 rounded-xl transition-all duration-300"
               >
-                Try LeadLex
+                Get in Touch
               </Button>
             </div>
             
@@ -205,9 +207,13 @@ export default function Layout({ children }) {
                     Sign in
                   </Button>
                   <Button 
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      window.location.href = createPageUrl('Contact');
+                    }}
                     className="w-full bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium"
                   >
-                    Try LeadLex
+                    Get in Touch
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
@@ -259,7 +265,7 @@ export default function Layout({ children }) {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-3">
                 <li><a href="#" className="text-white/60 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
+                <li><Link to={createPageUrl('Contact')} className="text-white/60 hover:text-white transition-colors">Contact</Link></li>
                 <li><Link to={createPageUrl('Privacy')} className="text-white/60 hover:text-white transition-colors">Privacy</Link></li>
                 <li><Link to={createPageUrl('Terms')} className="text-white/60 hover:text-white transition-colors">Terms</Link></li>
                 <li><Link to={createPageUrl('DataProcessing')} className="text-white/60 hover:text-white transition-colors">Data Processing (DPA)</Link></li>

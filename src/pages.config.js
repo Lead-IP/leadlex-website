@@ -5,6 +5,7 @@ import Privacy from './pages/Privacy';
 import DataProcessing from './pages/DataProcessing';
 import AITransparency from './pages/AITransparency';
 import LinkedInBanner from './pages/LinkedInBanner';
+import Contact from './pages/Contact';
 import __Layout from './Layout.jsx';
 
 
@@ -16,6 +17,7 @@ export const PAGES = {
     "DataProcessing": DataProcessing,
     "AITransparency": AITransparency,
     "LinkedInBanner": LinkedInBanner,
+    "Contact": Contact,
 }
 
 export const pagesConfig = {
