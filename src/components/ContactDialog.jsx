@@ -166,13 +166,12 @@ export default function ContactDialog({ open, onOpenChange }) {
               <div>
                 <label className="flex items-center text-sm font-medium text-gray-700 mb-2">
                   <MessageSquare className="w-4 h-4 mr-2 text-[#033934]" />
-                  Message *
+                  Message
                 </label>
                 <Textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
                   placeholder="Tell us about your needs..."
                   rows={4}
                 />
