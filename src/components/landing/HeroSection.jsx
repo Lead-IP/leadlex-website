@@ -169,7 +169,9 @@ export default function HeroSection() {
             className="mt-16"
           >
             <p className="text-white/60 text-sm uppercase tracking-wide mb-6">Trusted by</p>
-            <div className="flex items-center gap-8 opacity-90">
+            
+            {/* Desktop: Regular flex */}
+            <div className="hidden md:flex items-center gap-8 opacity-90">
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a590d6199_664de210b6699fae528c7460_Marksandclerklogosmall-p-500_edited.png"
                 alt="Marks & Clerk"
@@ -195,6 +197,77 @@ export default function HeroSection() {
                 alt="Wild Schnyder"
                 className="h-14 w-auto brightness-0 invert"
               />
+            </div>
+
+            {/* Mobile: Auto-scrolling carousel */}
+            <div className="md:hidden relative overflow-hidden">
+              <motion.div
+                className="flex items-center gap-8 opacity-90"
+                animate={{
+                  x: [0, -1000]
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 20,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {/* First set of logos */}
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a590d6199_664de210b6699fae528c7460_Marksandclerklogosmall-p-500_edited.png"
+                  alt="Marks & Clerk"
+                  className="h-10 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/7452823c5_64f9d1a3b9f53f30bb73251b_21_edited.png"
+                  alt="mceller"
+                  className="h-10 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/982845fff_Untitleddesign3.png"
+                  alt="graulund consulting"
+                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/efbed030b_Untitleddesign2.png"
+                  alt="Maiwald"
+                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
+                  alt="Wild Schnyder"
+                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                />
+                {/* Duplicate set for seamless loop */}
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a590d6199_664de210b6699fae528c7460_Marksandclerklogosmall-p-500_edited.png"
+                  alt="Marks & Clerk"
+                  className="h-10 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/7452823c5_64f9d1a3b9f53f30bb73251b_21_edited.png"
+                  alt="mceller"
+                  className="h-10 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/982845fff_Untitleddesign3.png"
+                  alt="graulund consulting"
+                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/efbed030b_Untitleddesign2.png"
+                  alt="Maiwald"
+                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                />
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
+                  alt="Wild Schnyder"
+                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                />
+              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -98,7 +98,13 @@ export default function Layout({ children }) {
                 link.href.startsWith('#') ? (
                   <a
                     key={link.label}
-                    href={link.href}
+                    href={window.location.pathname === createPageUrl('Home') ? link.href : createPageUrl('Home') + link.href}
+                    onClick={(e) => {
+                      if (window.location.pathname !== createPageUrl('Home')) {
+                        e.preventDefault();
+                        window.location.href = createPageUrl('Home') + link.href;
+                      }
+                    }}
                     className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                       isScrolled ? 'text-gray-600 hover:text-[#033934]' : 'text-white/80 hover:text-white'
                     }`}
@@ -109,6 +115,7 @@ export default function Layout({ children }) {
                   <Link
                     key={link.label}
                     to={link.href}
+                    onClick={() => window.scrollTo(0, 0)}
                     className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                       isScrolled ? 'text-gray-600 hover:text-[#033934]' : 'text-white/80 hover:text-white'
                     }`}
@@ -164,8 +171,14 @@ export default function Layout({ children }) {
                   link.href.startsWith('#') ? (
                     <a
                       key={link.label}
-                      href={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
+                      href={window.location.pathname === createPageUrl('Home') ? link.href : createPageUrl('Home') + link.href}
+                      onClick={(e) => {
+                        setMobileMenuOpen(false);
+                        if (window.location.pathname !== createPageUrl('Home')) {
+                          e.preventDefault();
+                          window.location.href = createPageUrl('Home') + link.href;
+                        }
+                      }}
                       className="block text-gray-600 font-medium py-2 hover:text-[#033934] transition-colors"
                     >
                       {link.label}
@@ -174,7 +187,10 @@ export default function Layout({ children }) {
                     <Link
                       key={link.label}
                       to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        window.scrollTo(0, 0);
+                      }}
                       className="block text-gray-600 font-medium py-2 hover:text-[#033934] transition-colors"
                     >
                       {link.label}
