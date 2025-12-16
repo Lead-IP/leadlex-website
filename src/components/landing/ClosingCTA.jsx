@@ -72,6 +72,7 @@ export default function ClosingCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Button 
                 size="lg"
@@ -79,6 +80,14 @@ export default function ClosingCTA() {
               >
                 Try LeadLex
                 <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => window.location.href = '/contact'}
+                className="border-white/50 text-white hover:bg-white/10 font-medium px-10 py-7 text-lg rounded-xl transition-all duration-300 bg-transparent"
+              >
+                Get in Touch
               </Button>
             </motion.div>
           </div>

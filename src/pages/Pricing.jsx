@@ -394,6 +394,33 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* Custom Plan CTA */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-[#033934] to-[#044a43] rounded-3xl p-12 text-center text-white"
+          >
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+              Need a custom plan?
+            </h3>
+            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+              For larger organizations or specific requirements, we'd be happy to create a tailored solution for your firm.
+            </p>
+            <Button
+              size="lg"
+              onClick={() => window.location.href = '/contact'}
+              className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-10 py-6 text-lg rounded-xl"
+            >
+              Get in Touch
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
