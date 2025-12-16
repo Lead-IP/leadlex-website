@@ -213,7 +213,7 @@ export default function HeroSection() {
                   className="h-14 w-auto brightness-0 invert flex-shrink-0"
                 />
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a4336144d_Screenshot2025-12-16at091755.png"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/2651aace3_Yourparagraphtext.png"
                   alt="Partnell"
                   className="h-10 w-auto brightness-0 invert flex-shrink-0"
                 />
@@ -244,7 +244,7 @@ export default function HeroSection() {
                   className="h-14 w-auto brightness-0 invert flex-shrink-0"
                 />
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/a4336144d_Screenshot2025-12-16at091755.png"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/2651aace3_Yourparagraphtext.png"
                   alt="Partnell"
                   className="h-10 w-auto brightness-0 invert flex-shrink-0"
                 />
