@@ -205,17 +205,17 @@ export default function HeroSection() {
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/efbed030b_Untitleddesign2.png"
                   alt="Maiwald"
-                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                  className="h-16 w-auto brightness-0 invert flex-shrink-0"
                 />
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
                   alt="Wild Schnyder"
-                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                  className="h-16 w-auto brightness-0 invert flex-shrink-0"
                 />
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/2651aace3_Yourparagraphtext.png"
                   alt="Partnell"
-                  className="h-20 w-auto brightness-0 invert flex-shrink-0"
+                  className="h-24 w-auto brightness-0 invert flex-shrink-0"
                 />
                 {/* Duplicate set for seamless loop */}
                 <img 
@@ -236,17 +236,17 @@ export default function HeroSection() {
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/efbed030b_Untitleddesign2.png"
                   alt="Maiwald"
-                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                  className="h-16 w-auto brightness-0 invert flex-shrink-0"
                 />
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/4a43d6ac6_Untitleddesign4.png"
                   alt="Wild Schnyder"
-                  className="h-14 w-auto brightness-0 invert flex-shrink-0"
+                  className="h-16 w-auto brightness-0 invert flex-shrink-0"
                 />
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69401930ae2d0d19346fdda0/2651aace3_Yourparagraphtext.png"
                   alt="Partnell"
-                  className="h-20 w-auto brightness-0 invert flex-shrink-0"
+                  className="h-24 w-auto brightness-0 invert flex-shrink-0"
                 />
               </motion.div>
             </div>
