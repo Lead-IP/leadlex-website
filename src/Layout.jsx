@@ -140,10 +140,9 @@ export default function Layout({ children }) {
                 Sign in
               </Button>
               <Button 
-                onClick={() => window.location.href = createPageUrl('Contact')}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-6 rounded-xl transition-all duration-300"
               >
-                Get in Touch
+                Try LeadLex
               </Button>
             </div>
             
@@ -207,13 +206,9 @@ export default function Layout({ children }) {
                     Sign in
                   </Button>
                   <Button 
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      window.location.href = createPageUrl('Contact');
-                    }}
                     className="w-full bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium"
                   >
-                    Get in Touch
+                    Try LeadLex
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
