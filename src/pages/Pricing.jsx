@@ -78,24 +78,44 @@ const plans = [
 
 const faqs = [
   {
+    question: 'Does LeadLex offer a free trial?',
+    answer: 'Yes. LeadLex offers a 7-day free trial so firms can test workflows and assess fit without commitment.'
+  },
+  {
+    question: 'Is LeadLex cheaper than HubSpot?',
+    answer: 'Yes. LeadLex is significantly more affordable than HubSpot for law firms and includes more users per plan without requiring separate sales or marketing modules.'
+  },
+  {
+    question: 'How many users are included in each plan?',
+    answer: 'Each LeadLex plan includes multiple users by default. Additional users can be added at a transparent, fixed monthly rate.'
+  },
+  {
     question: 'Is pricing per user or per firm?',
-    answer: 'Plans include a set number of users. Additional users can be added at a fixed monthly rate depending on the plan.'
+    answer: 'Plans include a base number of users, with optional per-user add-ons. AI credits are shared at the account level.'
   },
   {
-    question: 'Can we change plans later?',
-    answer: 'Yes. You can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.'
+    question: 'Are there long-term contracts?',
+    answer: 'No. Plans are billed semi-annually, and firms can upgrade or downgrade as their needs change.'
   },
   {
-    question: 'Do all users share AI credits?',
-    answer: 'Yes. AI credits are pooled at the account level so teams can allocate usage where it matters most.'
+    question: 'What happens after the free trial ends?',
+    answer: 'You can choose a plan or stop using LeadLex. No data is lost during the trial period.'
   },
   {
-    question: 'Is this a traditional CRM?',
-    answer: 'No. LeadLex is built specifically for B2B law firms. It focuses on mandates, client relationships, and execution — not sales funnels or marketing automation.'
+    question: 'Are there hidden fees?',
+    answer: 'No. Pricing is transparent. There are no setup fees or mandatory add-ons.'
   },
   {
-    question: 'Is our data secure?',
-    answer: 'Yes. Each firm operates in a fully isolated environment with role-based access and legal-grade data controls.'
+    question: 'Do we need to pay extra for AI features?',
+    answer: 'Each plan includes monthly AI credits. Additional credits can be purchased only if needed.'
+  },
+  {
+    question: 'Can we start with a small team and grow later?',
+    answer: 'Yes. Many firms start with a small group and expand usage as adoption grows.'
+  },
+  {
+    question: 'Is LeadLex suitable for firms with many partners?',
+    answer: 'Yes. LeadLex allows more users per plan than most CRMs, making it cost-effective for partner-heavy firms.'
   }
 ];
 

@@ -9,28 +9,36 @@ import {
 
 const faqs = [
   {
-    question: 'Is this a traditional CRM?',
-    answer: 'No. LeadLex is built specifically for B2B law firms. It focuses on mandates, client relationships, and execution — not sales funnels or marketing automation.'
+    question: 'What is LeadLex?',
+    answer: 'LeadLex is a business development and relationship platform built specifically for B2B law firms. It helps firms manage mandates, client relationships, and follow-ups in a simple, legally aligned system.'
   },
   {
-    question: 'How is AI used in LeadLex?',
-    answer: 'AI is used only where it saves time: flagging dormant relationships, suggesting next actions, enriching contact data, and helping you find prospects from 250M+ contacts. Every suggestion is explainable and optional.'
+    question: 'Is LeadLex built specifically for law firms?',
+    answer: 'Yes. LeadLex is designed exclusively for professional services and B2B law firms, using legal terminology, mandate-based workflows, and partner-friendly processes.'
   },
   {
-    question: 'How does pricing work?',
-    answer: 'Plans include a set number of users and monthly AI credits. Additional users can be added at a fixed rate. All plans include mandate tracking, relationship management, and AI support.'
+    question: 'What types of law firms is LeadLex best for?',
+    answer: 'LeadLex is ideal for small-to-midsized IP, M&A, corporate, and business law firms where relationships, long sales cycles, and repeat mandates matter.'
   },
   {
-    question: 'Is our data secure?',
-    answer: 'Yes. Each firm operates in a fully isolated environment with role-based access and legal-grade data controls. We are GDPR compliant and use EU-based infrastructure.'
+    question: 'How is LeadLex different from a traditional CRM?',
+    answer: 'Traditional CRMs are built for sales teams. LeadLex is mandate-first, avoids sales jargon, and supports legal business development workflows like client retention and cross-practice growth.'
   },
   {
-    question: 'Can we try before committing?',
-    answer: 'Yes. We offer demos and trial periods so you can test LeadLex with your team before making a decision.'
+    question: 'Do partners actually use LeadLex?',
+    answer: 'Yes. LeadLex is designed for adoption: mandates, notes, and follow-ups can be added in under 60 seconds, with minimal required fields and no unnecessary complexity.'
   },
   {
-    question: 'Do all users share AI credits?',
-    answer: 'Yes. AI credits are pooled at the account level so teams can allocate usage where it matters most.'
+    question: 'Does LeadLex replace spreadsheets?',
+    answer: 'Yes. LeadLex offers the simplicity of spreadsheets with added structure, reminders, reporting, and firm-wide visibility—without losing flexibility.'
+  },
+  {
+    question: 'How does LeadLex use AI?',
+    answer: 'LeadLex uses AI quietly in the background to suggest next steps, flag dormant mandates, enrich contacts, and summarize activity. AI never makes decisions and is always optional.'
+  },
+  {
+    question: 'Is LeadLex GDPR compliant?',
+    answer: 'Yes. LeadLex is built under German GDPR standards, operates with a formal Data Processing Agreement, and ensures strict data separation between firms.'
   }
 ];
 
