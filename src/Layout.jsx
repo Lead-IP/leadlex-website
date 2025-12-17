@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from './utils';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Linkedin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CookieBanner from './components/CookieBanner';
 import ContactDialog from './components/ContactDialog';
@@ -249,10 +249,19 @@ export default function Layout({ children }) {
                   className="h-8 w-auto brightness-0 invert"
                 />
               </div>
-              <p className="text-white/60 leading-relaxed max-w-sm">
+              <p className="text-white/60 leading-relaxed max-w-sm mb-4">
                 Business development and relationship platform built specifically 
                 for IP, M&A, and corporate law firms.
               </p>
+              <a 
+                href="https://www.linkedin.com/company/lead-ip/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 text-white" />
+              </a>
             </div>
             
             {/* Links */}
