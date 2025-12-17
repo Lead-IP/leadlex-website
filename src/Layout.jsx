@@ -12,7 +12,7 @@ const navLinks = [
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Security', href: '#security' },
   { label: 'Pricing', href: createPageUrl('Pricing') },
-  { label: 'Contact', href: createPageUrl('Contact') }
+  { label: 'Try LeadLex', href: createPageUrl('TryLeadLex') }
 ];
 
 export default function Layout({ children }) {
@@ -142,7 +142,7 @@ export default function Layout({ children }) {
                 Sign in
               </Button>
               <Button 
-                onClick={() => setContactDialogOpen(true)}
+                onClick={() => window.location.href = createPageUrl('TryLeadLex')}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-6 rounded-xl transition-all duration-300"
               >
                 Try LeadLex
@@ -211,7 +211,7 @@ export default function Layout({ children }) {
                   <Button 
                     onClick={() => {
                       setMobileMenuOpen(false);
-                      setContactDialogOpen(true);
+                      window.location.href = createPageUrl('TryLeadLex');
                     }}
                     className="w-full bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium"
                   >

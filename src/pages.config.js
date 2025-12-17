@@ -7,6 +7,7 @@ import AITransparency from './pages/AITransparency';
 import LinkedInBanner from './pages/LinkedInBanner';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
+import TryLeadLex from './pages/TryLeadLex';
 import __Layout from './Layout.jsx';
 
 
@@ -20,6 +21,7 @@ export const PAGES = {
     "LinkedInBanner": LinkedInBanner,
     "Contact": Contact,
     "FAQ": FAQ,
+    "TryLeadLex": TryLeadLex,
 }
 
 export const pagesConfig = {
