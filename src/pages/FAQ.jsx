@@ -42,7 +42,7 @@ const faqSections = [
         answer: 'Yes. LeadLex is a strong HubSpot alternative for law firms that want legal-specific workflows, lower costs, and simpler adoption without marketing automation tools.'
       },
       {
-        question: 'Why don't many law firms use HubSpot?',
+        question: "Why don't many law firms use HubSpot?",
         answer: 'Many law firms find HubSpot too complex, sales-driven, and expensive for legal business development. LeadLex is built specifically for law firm needs.'
       },
       {
