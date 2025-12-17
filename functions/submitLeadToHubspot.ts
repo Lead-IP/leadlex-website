@@ -45,11 +45,12 @@ Deno.serve(async (req) => {
     const result = await response.json();
     
     // Send admin notification emails
-    const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
-    const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
-    
-    const emailSubject = `New ${formTypeLabel} Form Submission`;
-    const emailBody = `
+    try {
+      const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
+      const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
+      
+      const emailSubject = `New ${formTypeLabel} Form Submission`;
+      const emailBody = `
 New form submission received:
 
 Form Type: ${formTypeLabel}
@@ -59,20 +60,24 @@ Email: ${email}
 ${message ? `Message: ${message}` : ''}
 
 HubSpot Contact ID: ${result.id}
-    `.trim();
+      `.trim();
 
-    // Send emails to both admins
-    for (const adminEmail of adminEmails) {
-      try {
-        await base44.asServiceRole.integrations.Core.SendEmail({
-          from_name: 'LeadLex',
-          to: adminEmail,
-          subject: emailSubject,
-          body: emailBody
-        });
-      } catch (emailError) {
-        console.error(`Failed to send email to ${adminEmail}:`, emailError);
+      // Send emails to both admins
+      for (const adminEmail of adminEmails) {
+        try {
+          await base44.asServiceRole.integrations.Core.SendEmail({
+            from_name: 'LeadLex',
+            to: adminEmail,
+            subject: emailSubject,
+            body: emailBody
+          });
+        } catch (emailError) {
+          console.error(`Failed to send email to ${adminEmail}:`, emailError);
+        }
       }
+    } catch (notificationError) {
+      // Log but don't fail the whole request if notifications fail
+      console.error('Failed to send admin notifications:', notificationError);
     }
     
     return Response.json({
