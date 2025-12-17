@@ -4,7 +4,7 @@ Deno.serve(async (req) => {
   try {
     const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
     
-    // Create base44 client - no auth needed for service role operations
+    // Create base44 client
     const base44 = createClientFromRequest(req);
     
     // Send admin notification emails
@@ -22,20 +22,26 @@ Email: ${email}
 ${message ? `Message: ${message}` : ''}
     `.trim();
 
-    // Send emails to both admins using service role (no user auth required)
+    // Send emails to both admins
     for (const adminEmail of adminEmails) {
-      await base44.asServiceRole.integrations.Core.SendEmail({
-        from_name: 'LeadLex',
-        to: adminEmail,
-        subject: emailSubject,
-        body: emailBody
-      });
+      try {
+        await base44.asServiceRole.integrations.Core.SendEmail({
+          from_name: 'LeadLex',
+          to: adminEmail,
+          subject: emailSubject,
+          body: emailBody
+        });
+      } catch (emailError) {
+        console.error(`Failed to send email to ${adminEmail}:`, emailError);
+        // Continue to next email even if one fails
+      }
     }
     
     return Response.json({
       success: true
     });
   } catch (error) {
-    return Response.json({ error: error.message }, { status: 500 });
+    console.error('Function error:', error);
+    return Response.json({ error: error.message || 'Failed to submit form' }, { status: 500 });
   }
 });
