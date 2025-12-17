@@ -12,7 +12,7 @@ const navLinks = [
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Security', href: '#security' },
   { label: 'Pricing', href: createPageUrl('Pricing') },
-  { label: 'Try LeadLex', href: createPageUrl('TryLeadLex') }
+  { label: 'Contact', href: createPageUrl('Contact') }
 ];
 
 export default function Layout({ children }) {
