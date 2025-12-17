@@ -7,6 +7,45 @@ Deno.serve(async (req) => {
     // Create base44 client
     const base44 = createClientFromRequest(req);
     
+    const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
+    
+    if (!hubspotApiKey) {
+      return Response.json({ error: 'HubSpot API key not configured' }, { status: 500 });
+    }
+
+    // Create contact in HubSpot
+    const contactData = {
+      properties: {
+        email: email,
+        firstname: name.split(' ')[0] || name,
+        lastname: name.split(' ').slice(1).join(' ') || '',
+        company: company,
+        hs_lead_status: 'NEW',
+        lifecyclestage: 'lead'
+      }
+    };
+    
+    // Add message to notes field if provided
+    if (message) {
+      contactData.properties.hs_note = message;
+    }
+
+    const response = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${hubspotApiKey}`
+      },
+      body: JSON.stringify(contactData)
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      return Response.json({ error: `HubSpot API error: ${error}` }, { status: 500 });
+    }
+
+    const result = await response.json();
+    
     // Send admin notification emails
     const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
     const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
@@ -20,6 +59,8 @@ Name: ${name}
 Company: ${company}
 Email: ${email}
 ${message ? `Message: ${message}` : ''}
+
+HubSpot Contact ID: ${result.id}
     `.trim();
 
     // Send emails to both admins
@@ -38,7 +79,8 @@ ${message ? `Message: ${message}` : ''}
     }
     
     return Response.json({
-      success: true
+      success: true,
+      contactId: result.id
     });
   } catch (error) {
     console.error('Function error:', error);
