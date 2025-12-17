@@ -1,6 +1,9 @@
+import { createClientFromRequest } from 'npm:@base44/sdk@0.8.4';
+
 Deno.serve(async (req) => {
   try {
-    const { name, company, email, message } = await req.json();
+    const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
+    const base44 = createClientFromRequest(req);
     
     const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
     
@@ -40,6 +43,37 @@ Deno.serve(async (req) => {
     }
 
     const result = await response.json();
+    
+    // Send admin notification emails
+    const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
+    const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
+    
+    const emailSubject = `New ${formTypeLabel} Form Submission`;
+    const emailBody = `
+New form submission received:
+
+Form Type: ${formTypeLabel}
+Name: ${name}
+Company: ${company}
+Email: ${email}
+${message ? `Message: ${message}` : ''}
+
+HubSpot Contact ID: ${result.id}
+    `.trim();
+
+    // Send emails to both admins
+    for (const adminEmail of adminEmails) {
+      try {
+        await base44.asServiceRole.integrations.Core.SendEmail({
+          from_name: 'LeadLex',
+          to: adminEmail,
+          subject: emailSubject,
+          body: emailBody
+        });
+      } catch (emailError) {
+        console.error(`Failed to send email to ${adminEmail}:`, emailError);
+      }
+    }
     
     return Response.json({
       success: true,

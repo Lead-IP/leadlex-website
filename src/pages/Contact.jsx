@@ -4,8 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Mail, Building2, User, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { Mail, Building2, User, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { base44 } from '@/api/base44Client';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,7 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,12 +29,28 @@ export default function Contact() {
     }
 
     setIsSubmitting(true);
+    setError(null);
 
-    // Simulate form submission - replace with actual API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await base44.functions.invoke('submitLeadToHubspot', {
+        name: formData.name,
+        company: formData.company,
+        email: formData.email,
+        message: formData.message,
+        formType: 'contact'
+      });
+      
+      if (response.data.error) {
+        throw new Error(response.data.error);
+      }
+      
       setIsSubmitted(true);
-    }, 1500);
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError(err.message || 'Failed to submit. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -202,6 +220,17 @@ export default function Contact() {
                   </label>
                 </div>
               </div>
+
+              {/* Error Message */}
+              {error && (
+                <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div className="text-sm text-red-800">
+                    <p className="font-medium mb-1">Submission failed</p>
+                    <p>{error}</p>
+                  </div>
+                </div>
+              )}
 
               {/* Submit Button */}
               <Button

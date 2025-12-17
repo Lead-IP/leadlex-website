@@ -41,7 +41,8 @@ export default function ContactDialog({ open, onOpenChange }) {
         name: formData.name,
         company: formData.company,
         email: formData.email,
-        message: formData.message
+        message: formData.message,
+        formType: 'try-leadlex'
       });
       
       if (response.data.error) {
