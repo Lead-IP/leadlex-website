@@ -95,7 +95,11 @@ export default function Contact() {
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Have questions about LeadLex? We'd love to hear from you. 
-              Fill out the form below and we'll get back to you within 24 hours.
+              Fill out the form below and we'll get back to you within 24 hours. 
+              Alternatively, you can view our{' '}
+              <a href="/faq" className="text-[#033934] underline hover:text-[#fb8628] font-medium">
+                FAQs
+              </a>.
             </p>
           </motion.div>
 
