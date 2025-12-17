@@ -3,6 +3,8 @@ import { createClientFromRequest } from 'npm:@base44/sdk@0.8.4';
 Deno.serve(async (req) => {
   try {
     const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
+    
+    // Create base44 client - no auth needed for service role operations
     const base44 = createClientFromRequest(req);
     
     // Send admin notification emails
@@ -20,7 +22,7 @@ Email: ${email}
 ${message ? `Message: ${message}` : ''}
     `.trim();
 
-    // Send emails to both admins
+    // Send emails to both admins using service role (no user auth required)
     for (const adminEmail of adminEmails) {
       await base44.asServiceRole.integrations.Core.SendEmail({
         from_name: 'LeadLex',
