@@ -5,52 +5,12 @@ Deno.serve(async (req) => {
     const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
     const base44 = createClientFromRequest(req);
     
-    const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
-    
-    if (!hubspotApiKey) {
-      return Response.json({ error: 'HubSpot API key not configured' }, { status: 500 });
-    }
-
-    // Create contact in HubSpot
-    const contactData = {
-      properties: {
-        email: email,
-        firstname: name.split(' ')[0] || name,
-        lastname: name.split(' ').slice(1).join(' ') || '',
-        company: company,
-        hs_lead_status: 'NEW',
-        lifecyclestage: 'lead'
-      }
-    };
-    
-    // Add message to notes field if provided
-    if (message) {
-      contactData.properties.hs_note = message;
-    }
-
-    const response = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${hubspotApiKey}`
-      },
-      body: JSON.stringify(contactData)
-    });
-
-    if (!response.ok) {
-      const error = await response.text();
-      return Response.json({ error: `HubSpot API error: ${error}` }, { status: 500 });
-    }
-
-    const result = await response.json();
-    
     // Send admin notification emails
-    try {
-      const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
-      const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
-      
-      const emailSubject = `New ${formTypeLabel} Form Submission`;
-      const emailBody = `
+    const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
+    const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
+    
+    const emailSubject = `New ${formTypeLabel} Form Submission`;
+    const emailBody = `
 New form submission received:
 
 Form Type: ${formTypeLabel}
@@ -58,31 +18,20 @@ Name: ${name}
 Company: ${company}
 Email: ${email}
 ${message ? `Message: ${message}` : ''}
+    `.trim();
 
-HubSpot Contact ID: ${result.id}
-      `.trim();
-
-      // Send emails to both admins
-      for (const adminEmail of adminEmails) {
-        try {
-          await base44.asServiceRole.integrations.Core.SendEmail({
-            from_name: 'LeadLex',
-            to: adminEmail,
-            subject: emailSubject,
-            body: emailBody
-          });
-        } catch (emailError) {
-          console.error(`Failed to send email to ${adminEmail}:`, emailError);
-        }
-      }
-    } catch (notificationError) {
-      // Log but don't fail the whole request if notifications fail
-      console.error('Failed to send admin notifications:', notificationError);
+    // Send emails to both admins
+    for (const adminEmail of adminEmails) {
+      await base44.asServiceRole.integrations.Core.SendEmail({
+        from_name: 'LeadLex',
+        to: adminEmail,
+        subject: emailSubject,
+        body: emailBody
+      });
     }
     
     return Response.json({
-      success: true,
-      contactId: result.id
+      success: true
     });
   } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });
