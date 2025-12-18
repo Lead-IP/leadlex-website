@@ -133,6 +133,7 @@ export default function Layout({ children }) {
             <div className="hidden md:flex items-center gap-4">
               <Button 
                 variant="ghost"
+                onClick={() => window.location.href = 'https://app.leadlex.com/AuthLogin'}
                 className={`font-medium transition-all duration-300 ${
                   isScrolled 
                     ? 'text-[#033934] hover:bg-[#033934]/5' 
@@ -142,7 +143,7 @@ export default function Layout({ children }) {
                 Sign in
               </Button>
               <Button 
-                onClick={() => window.location.href = createPageUrl('TryLeadLex')}
+                onClick={() => window.location.href = 'https://app.leadlex.com/AuthRegister'}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-6 rounded-xl transition-all duration-300"
               >
                 Try LeadLex
@@ -204,6 +205,10 @@ export default function Layout({ children }) {
                 <div className="pt-4 border-t border-gray-100 space-y-3">
                   <Button 
                     variant="outline"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      window.location.href = 'https://app.leadlex.com/AuthLogin';
+                    }}
                     className="w-full font-medium border-gray-200"
                   >
                     Sign in
@@ -211,7 +216,7 @@ export default function Layout({ children }) {
                   <Button 
                     onClick={() => {
                       setMobileMenuOpen(false);
-                      window.location.href = createPageUrl('TryLeadLex');
+                      window.location.href = 'https://app.leadlex.com/AuthRegister';
                     }}
                     className="w-full bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium"
                   >
