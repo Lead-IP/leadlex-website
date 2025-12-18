@@ -1,11 +1,15 @@
-import { createClientFromRequest } from 'npm:@base44/sdk@0.8.4';
+import { createClient } from 'npm:@base44/sdk@0.8.4';
 
 Deno.serve(async (req) => {
   try {
     const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
     
-    // Create base44 client
-    const base44 = createClientFromRequest(req);
+    // Create base44 client with service role for public form
+    const base44 = createClient(
+      Deno.env.get('BASE44_APP_ID'),
+      Deno.env.get('SUPABASE_URL'),
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    );
     
     const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
     
@@ -66,7 +70,7 @@ HubSpot Contact ID: ${result.id}
     // Send emails to both admins
     for (const adminEmail of adminEmails) {
       try {
-        await base44.asServiceRole.integrations.Core.SendEmail({
+        await base44.integrations.Core.SendEmail({
           from_name: 'LeadLex',
           to: adminEmail,
           subject: emailSubject,
