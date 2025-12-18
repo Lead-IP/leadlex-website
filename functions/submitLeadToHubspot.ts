@@ -28,11 +28,6 @@ Deno.serve(async (req) => {
         lifecyclestage: 'lead'
       }
     };
-    
-    // Add message to notes field if provided
-    if (message) {
-      contactData.properties.hs_note = message;
-    }
 
     const response = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
       method: 'POST',
@@ -49,6 +44,41 @@ Deno.serve(async (req) => {
     }
 
     const result = await response.json();
+    
+    // Create a note if message is provided
+    if (message) {
+      try {
+        const noteData = {
+          properties: {
+            hs_note_body: message,
+            hs_timestamp: new Date().getTime()
+          },
+          associations: [
+            {
+              to: { id: result.id },
+              types: [
+                {
+                  associationCategory: "HUBSPOT_DEFINED",
+                  associationTypeId: 202
+                }
+              ]
+            }
+          ]
+        };
+        
+        await fetch('https://api.hubapi.com/crm/v3/objects/notes', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${hubspotApiKey}`
+          },
+          body: JSON.stringify(noteData)
+        });
+      } catch (noteError) {
+        console.error('Failed to create note:', noteError);
+        // Continue even if note creation fails
+      }
+    }
     
     // Send admin notification emails
     const adminEmails = ['alexander@leadip.io', 'winston@leadip.io', 'hello@leadip.io'];
