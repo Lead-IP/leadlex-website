@@ -51,7 +51,7 @@ Deno.serve(async (req) => {
     const result = await response.json();
     
     // Send admin notification emails
-    const adminEmails = ['alexander@leadip.io', 'winston@leadip.io'];
+    const adminEmails = ['alexander@leadip.io', 'winston@leadip.io', 'hello@leadip.io'];
     const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
     
     const emailSubject = `New ${formTypeLabel} Form Submission`;
