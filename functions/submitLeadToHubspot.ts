@@ -1,15 +1,10 @@
-import { createClient } from 'npm:@base44/sdk@0.8.4';
+import { createClientFromRequest } from 'npm:@base44/sdk@0.8.6';
 
 Deno.serve(async (req) => {
-  try {
-    const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
-    
-    // Create base44 client with service role for public form
-    const base44 = createClient(
-      Deno.env.get('BASE44_APP_ID'),
-      Deno.env.get('SUPABASE_URL'),
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
-    );
+  const { name, company, email, message, formType = 'try-leadlex' } = await req.json();
+  
+  // Create base44 client
+  const base44 = createClientFromRequest(req);
     
     const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
     
