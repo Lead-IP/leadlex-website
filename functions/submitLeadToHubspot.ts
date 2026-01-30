@@ -80,8 +80,7 @@ Deno.serve(async (req) => {
       }
     }
     
-    // Send admin notification emails
-    const adminEmails = ['alexander@leadip.io', 'winston@leadip.io', 'hello@leadip.io'];
+    // Send notification email
     const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
     
     const emailSubject = `New ${formTypeLabel} Form Submission`;
@@ -97,20 +96,12 @@ ${message ? `Message: ${message}` : ''}
 HubSpot Contact ID: ${result.id}
     `.trim();
 
-    // Send emails to both admins
-    for (const adminEmail of adminEmails) {
-      try {
-        await base44.integrations.Core.SendEmail({
-          from_name: 'LeadLex',
-          to: adminEmail,
-          subject: emailSubject,
-          body: emailBody
-        });
-      } catch (emailError) {
-        console.error(`Failed to send email to ${adminEmail}:`, emailError);
-        // Continue to next email even if one fails
-      }
-    }
+    await base44.integrations.Core.SendEmail({
+      from_name: 'LeadLex',
+      to: 'alexander@leadip.io',
+      subject: emailSubject,
+      body: emailBody
+    });
     
     return Response.json({
       success: true,
