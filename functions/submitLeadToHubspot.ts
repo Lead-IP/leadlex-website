@@ -101,21 +101,25 @@ HubSpot Contact ID: ${result.id}
     
     // Create email in RFC 2822 format
     const emailContent = [
-      `To: alexander@leadip.io`,
+      'Content-Type: text/plain; charset="UTF-8"',
+      'MIME-Version: 1.0',
+      'To: alexander@leadip.io',
       `Subject: ${emailSubject}`,
-      `Content-Type: text/plain; charset=utf-8`,
       '',
       emailBody
-    ].join('\n');
+    ].join('\r\n');
     
-    // Encode email to base64url
-    const encodedEmail = btoa(emailContent)
+    // Encode email to base64url (Deno compatible)
+    const encoder = new TextEncoder();
+    const data = encoder.encode(emailContent);
+    const base64 = btoa(String.fromCharCode(...data));
+    const encodedEmail = base64
       .replace(/\+/g, '-')
       .replace(/\//g, '_')
       .replace(/=+$/, '');
     
     // Send via Gmail API
-    await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
+    const gmailResponse = await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${gmailToken}`,
@@ -123,6 +127,11 @@ HubSpot Contact ID: ${result.id}
       },
       body: JSON.stringify({ raw: encodedEmail })
     });
+    
+    if (!gmailResponse.ok) {
+      const gmailError = await gmailResponse.text();
+      console.error('Gmail API error:', gmailError);
+    }
     
     return Response.json({
       success: true,
