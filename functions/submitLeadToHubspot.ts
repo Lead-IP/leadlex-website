@@ -80,7 +80,7 @@ Deno.serve(async (req) => {
       }
     }
     
-    // Send notification email
+    // Send notification email via Gmail
     const formTypeLabel = formType === 'contact' ? 'Get in Touch' : 'Try LeadLex';
     
     const emailSubject = `New ${formTypeLabel} Form Submission`;
@@ -96,11 +96,32 @@ ${message ? `Message: ${message}` : ''}
 HubSpot Contact ID: ${result.id}
     `.trim();
 
-    await base44.integrations.Core.SendEmail({
-      from_name: 'LeadLex',
-      to: 'alexander@leadip.io',
-      subject: emailSubject,
-      body: emailBody
+    // Get Gmail access token
+    const gmailToken = await base44.asServiceRole.connectors.getAccessToken('gmail');
+    
+    // Create email in RFC 2822 format
+    const emailContent = [
+      `To: alexander@leadip.io`,
+      `Subject: ${emailSubject}`,
+      `Content-Type: text/plain; charset=utf-8`,
+      '',
+      emailBody
+    ].join('\n');
+    
+    // Encode email to base64url
+    const encodedEmail = btoa(emailContent)
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/, '');
+    
+    // Send via Gmail API
+    await fetch('https://gmail.googleapis.com/gmail/v1/users/me/messages/send', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${gmailToken}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ raw: encodedEmail })
     });
     
     return Response.json({
