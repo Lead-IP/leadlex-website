@@ -128,12 +128,8 @@ HubSpot Contact ID: ${result.id}
       console.error('Gmail API error:', gmailError);
     }
     
-    return Response.json({
-      success: true,
-      contactId: result.id
-    });
-  } catch (error) {
-    console.error('Function error:', error);
-    return Response.json({ error: error.message || 'Failed to submit form' }, { status: 500 });
-  }
+  return Response.json({
+    success: true,
+    contactId: result.id
+  });
 });
