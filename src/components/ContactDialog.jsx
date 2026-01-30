@@ -37,7 +37,7 @@ export default function ContactDialog({ open, onOpenChange }) {
     setError(null);
 
     try {
-      const response = await base44.functions.invoke('submitLeadToHubspot', {
+      const response = await base44.functions.invoke('sendContactEmail', {
         name: formData.name,
         company: formData.company,
         email: formData.email,
