@@ -5,12 +5,12 @@ Deno.serve(async (req) => {
   
   // Create base44 client
   const base44 = createClientFromRequest(req);
-    
-    const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
-    
-    if (!hubspotApiKey) {
-      return Response.json({ error: 'HubSpot API key not configured' }, { status: 500 });
-    }
+  
+  const hubspotApiKey = Deno.env.get('HUBSPOT_API_KEY');
+  
+  if (!hubspotApiKey) {
+    return Response.json({ error: 'HubSpot API key not configured' }, { status: 500 });
+  }
 
     // Create contact in HubSpot
     const contactData = {
