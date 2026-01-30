@@ -32,7 +32,7 @@ export default function Contact() {
     setError(null);
 
     try {
-      const response = await base44.functions.invoke('submitLeadToHubspot', {
+      const response = await base44.functions.invoke('sendContactEmail', {
         name: formData.name,
         company: formData.company,
         email: formData.email,
