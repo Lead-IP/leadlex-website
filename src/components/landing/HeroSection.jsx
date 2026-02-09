@@ -117,7 +117,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}>
 
-            <span className="inline-block text-white/70 text-sm font-medium tracking-wide uppercase mb-6">AI-powered growth FOR LAW FIRMS
+            <span className="inline-block text-white/70 text-sm font-medium tracking-wide uppercase mb-6">Next Generation GROWTH FOR LAW FIRMS
 
               </span>
           </motion.div>
@@ -136,7 +136,7 @@ export default function HeroSection() {
           <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">An AI-enhanced tool to win new mandates, protect key client relationships & stay on top of follow-ups. Built specifically for IP, M&A, and corporate law firms.
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">An AI-enhanced tool to win new mandates, protect client relationships & stay on top of follow-ups. Built specifically for IP, M&A, and corporate law firms.
 
 
 
