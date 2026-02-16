@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import ContactDialog from '../ContactDialog';
 
 const benefits = [
-  'Win more mandates',
-  'Retain key clients',
-  'Institutionalize relationships'
+  'Set up in 5 minutes',
+  'Works in Teams & WhatsApp',
+  'Lexi included free'
 ];
 
 export default function ClosingCTA() {
@@ -39,8 +39,7 @@ export default function ClosingCTA() {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6 max-w-3xl mx-auto"
             >
-              Start building stronger
-              <br />client relationships today
+              Add Lexi to your team today
             </motion.h2>
             
             <motion.p
@@ -50,8 +49,7 @@ export default function ClosingCTA() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg text-white/70 leading-relaxed mb-10 max-w-2xl mx-auto"
             >
-              If your firm wants to grow without adding administrative burden, 
-              LeadLex is built for you.
+              Free to start. No credit card. No implementation project. Lexi handles your onboarding in 5 minutes.
             </motion.p>
             
             <motion.div
@@ -84,7 +82,7 @@ export default function ClosingCTA() {
                 onClick={() => setContactDialogOpen(true)}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-10 py-7 text-lg rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#fb8628]/30 hover:scale-105"
               >
-                Try LeadLex
+                Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button 
@@ -93,7 +91,7 @@ export default function ClosingCTA() {
                 onClick={() => window.location.href = '/contact'}
                 className="border-white/50 text-white hover:bg-white/10 font-medium px-10 py-7 text-lg rounded-xl transition-all duration-300 bg-transparent"
               >
-                Get in Touch
+                Talk to Lexi
               </Button>
             </motion.div>
           </div>

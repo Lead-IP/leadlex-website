@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Bell, Lightbulb, Database, Search } from 'lucide-react';
+import { Sparkles, Bell, Lightbulb, Database, Search, Users, BarChart3 } from 'lucide-react';
 
 const aiFeatures = [
   {
@@ -22,12 +22,22 @@ const aiFeatures = [
     icon: Database,
     title: 'Enriches information',
     description: 'Contact and company data enhanced automatically'
+  },
+  {
+    icon: Users,
+    title: 'Prepares your meetings',
+    description: 'Contact history, deal context, and talking points ready before every meeting'
+  },
+  {
+    icon: BarChart3,
+    title: 'Morning briefings',
+    description: 'Start each day knowing your tasks, meetings, pipeline changes, and what needs attention'
   }
 ];
 
 export default function AISection() {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section id="lexi-ai" className="py-24 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div 
         className="absolute inset-0"
@@ -58,7 +68,7 @@ export default function AISection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6"
             >
               <Sparkles className="w-4 h-4 text-[#fb8628]" />
-              <span className="text-white/80 text-sm font-medium">Lexi AI</span>
+              <span className="text-white/80 text-sm font-medium">AI Team Member</span>
             </motion.div>
             
             <motion.h2
@@ -68,9 +78,7 @@ export default function AISection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl md:text-4xl font-semibold text-white leading-tight mb-6"
             >
-              AI that supports lawyers
-              <br />
-              <span className="text-white/70">— quietly</span>
+              Meet Lexi, your AI team member
             </motion.h2>
             
             <motion.p
@@ -80,9 +88,7 @@ export default function AISection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-white/70 leading-relaxed mb-10"
             >
-              LeadLex uses AI only where it genuinely saves time. Every suggestion is 
-              explainable, snoozable, and tied to a real action. No chatbots. No noise. 
-              Just momentum protection.
+              Lexi works alongside your team 24/7. She's not a chatbot or a sidebar suggestion — she's a colleague who manages your business development. Included free in every plan.
             </motion.p>
             
             <div className="space-y-4">
@@ -128,7 +134,7 @@ export default function AISection() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-semibold text-[#033934]">Lexi suggests</span>
+                      <span className="text-sm font-semibold text-[#033934]">Lexi, AI Team Member</span>
                       <span className="text-xs text-gray-400">2 min ago</span>
                     </div>
                     <p className="text-sm text-gray-600">

@@ -1,6 +1,7 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import HeroSection from '../components/landing/HeroSection';
+import LexiScenariosSection from '../components/landing/LexiScenariosSection';
 import ProblemSection from '../components/landing/ProblemSection';
 import CapabilitiesSection from '../components/landing/CapabilitiesSection';
 import HowItWorksSection from '../components/landing/HowItWorksSection';
@@ -55,6 +56,7 @@ export default function Home() {
         }}
       />
       <HeroSection />
+      <LexiScenariosSection />
       <ProblemSection />
       <div id="features">
         <CapabilitiesSection />

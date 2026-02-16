@@ -91,6 +91,30 @@ export default function ProblemSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <div className="text-center p-6 rounded-2xl bg-[#033934]/5 border border-[#033934]/10">
+            <p className="text-3xl font-bold text-[#033934]">80%</p>
+            <p className="text-sm text-gray-600 mt-1">of law firms have a CRM, but only 20% say it's effective</p>
+            <p className="text-xs text-gray-400 mt-2">LSSO State of CRM 2023</p>
+          </div>
+          <div className="text-center p-6 rounded-2xl bg-[#033934]/5 border border-[#033934]/10">
+            <p className="text-3xl font-bold text-[#033934]">62%</p>
+            <p className="text-sm text-gray-600 mt-1">of clients switch firms due to poor communication</p>
+            <p className="text-xs text-gray-400 mt-2">World Metrics 2026</p>
+          </div>
+          <div className="text-center p-6 rounded-2xl bg-[#033934]/5 border border-[#033934]/10">
+            <p className="text-3xl font-bold text-[#033934]">40%</p>
+            <p className="text-sm text-gray-600 mt-1">of lawyers still use Excel for business development</p>
+            <p className="text-xs text-gray-400 mt-2">PwC Law Firms Survey 2024</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center">
 

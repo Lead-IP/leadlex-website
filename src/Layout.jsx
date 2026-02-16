@@ -9,6 +9,7 @@ import ContactDialog from './components/ContactDialog';
 
 const navLinks = [
   { label: 'Features', href: '#features' },
+  { label: 'Lexi AI', href: '#lexi-ai' },
   { label: 'How it works', href: '#how-it-works' },
   { label: 'Security', href: '#security' },
   { label: 'Pricing', href: createPageUrl('Pricing') },

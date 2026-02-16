@@ -117,7 +117,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}>
 
-            <span className="inline-block text-white/70 text-sm font-medium tracking-wide uppercase mb-6">Next Generation GROWTH FOR LAW FIRMS
+            <span className="inline-block text-white/70 text-sm font-medium tracking-wide uppercase mb-6">YOUR AI TEAM MEMBER FOR BUSINESS DEVELOPMENT
 
               </span>
           </motion.div>
@@ -128,15 +128,15 @@ export default function HeroSection() {
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.1] tracking-tight mb-6">
 
-            Business development
+            Meet Lexi — the AI
             <br />
-            <span className="text-white/80">without the friction</span>
+            <span className="text-white/80">team member that grows your firm</span>
           </motion.h1>
           
           <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">An AI-enhanced tool to win new mandates, protect client relationships & stay on top of follow-ups. Built specifically for IP, M&A, and corporate law firms.
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">Lexi manages your contacts, prepares your meetings, builds your campaigns, and keeps your pipeline healthy. She works in your CRM, in Microsoft Teams, and on WhatsApp — so you can focus on practicing law.
 
 
 
@@ -154,7 +154,7 @@ export default function HeroSection() {
                 onClick={() => setContactDialogOpen(true)}
                 className="bg-[#fb8628] hover:bg-[#e5791f] text-white font-medium px-8 py-6 text-base rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#fb8628]/20">
 
-              Try LeadLex
+              Start Free Trial
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
             <Button
@@ -163,7 +163,7 @@ export default function HeroSection() {
                 className="border-white/30 text-white hover:bg-white/10 font-medium px-8 py-6 text-base rounded-xl transition-all duration-300 bg-transparent"
                 asChild>
 
-              <a href="#how-it-works">See how it works</a>
+              <a href="#lexi-ai">Talk to Lexi</a>
             </Button>
           </motion.div>
 

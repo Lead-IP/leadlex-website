@@ -151,8 +151,7 @@ export default function CapabilitiesSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }} className="text-3xl md:text-4xl font-semibold text-[#033934] leading-tight mb-6">Built for how law firms actually grow; 
-Empowered with AI support
+            transition={{ duration: 0.6, delay: 0.1 }} className="text-3xl md:text-4xl font-semibold text-[#033934] leading-tight mb-6">You practice law.{'\n'}Lexi handles the rest.
 
 
           </motion.h2>
@@ -161,7 +160,7 @@ Empowered with AI support
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }} className="text-lg text-gray-600 leading-relaxed">Every feature designed around legal workflows, not generic sales processes. Its like having a full-time business development employee, at a fraction of the cost.
+            transition={{ duration: 0.6, delay: 0.2 }} className="text-lg text-gray-600 leading-relaxed">Every feature designed around legal workflows, not generic sales processes. Lexi works alongside your team so your CRM actually gets used.
 
 
 
