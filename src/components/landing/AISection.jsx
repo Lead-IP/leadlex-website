@@ -1,12 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Lightbulb, Database, Search, BarChart3, Target } from 'lucide-react';
+import { Sparkles, Lightbulb, Database, Search, BarChart3, Target, Calendar, Mail } from 'lucide-react';
 
 const aiFeatures = [
   {
     icon: Target,
-    title: 'Proactive outreach suggestions',
-    description: 'Recommends who to contact today based on relationship health and deal activity'
+    title: 'Proactive prospecting',
+    description: 'Tells you who to contact today and why, based on relationship health and deal activity'
+  },
+  {
+    icon: Calendar,
+    title: 'Event intelligence',
+    description: 'Scan attendee lists, find warm connections, and prep your meetings automatically'
+  },
+  {
+    icon: Mail,
+    title: 'Automated campaigns',
+    description: 'From scanned contact to personalized email sequence in clicks, not hours'
   },
   {
     icon: BarChart3,
@@ -14,14 +24,9 @@ const aiFeatures = [
     description: 'Tracks relationship health across your network. Flags contacts going cold before you lose them'
   },
   {
-    icon: Lightbulb,
-    title: 'Suggests next actions',
-    description: 'Clear, actionable recommendations based on context'
-  },
-  {
     icon: Search,
     title: 'AI Prospector',
-    description: 'Search 250M+ contacts and companies for conference prep, roadshows, and relationship refreshes'
+    description: 'Search 250M+ contacts and companies for conference prep and roadshows'
   },
   {
     icon: Database,
@@ -83,7 +88,7 @@ export default function AISection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-white/70 leading-relaxed mb-10"
             >
-              Lexi works alongside your team 24/7. She's not a chatbot or a sidebar suggestion — she's a colleague who manages your business development. Included free in every plan.
+              Lexi scans your network, finds opportunities, and launches personalized outreach — all while you practice law. From event prep to automated follow-ups, she handles the workflow so you don't have to.
             </motion.p>
             
             <div className="space-y-4">

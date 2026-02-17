@@ -5,14 +5,24 @@ import { createPageUrl } from '../utils';
 import { Button } from '@/components/ui/button';
 import {
   ArrowRight, Target, TrendingUp, Lightbulb, Search, Database, Shield, Sparkles,
-  Clock, MessageSquare, Mail, Smartphone, Check, X
+  Clock, MessageSquare, Mail, Smartphone, Check, X, Calendar
 } from 'lucide-react';
 
 const currentFeatures = [
   {
     icon: Target,
     title: 'Proactive Prospecting',
-    description: 'Recommends who to contact today based on deal activity, relationship decay, and interaction history. Never miss a follow-up again.'
+    description: 'Lexi tells you who to contact today and why. Based on relationship decay, deal activity, and interaction history, so you never miss a follow-up.'
+  },
+  {
+    icon: Calendar,
+    title: 'Event Intelligence',
+    description: 'Upload an attendee list and Lexi finds your warm connections, flags high-value targets, and preps your meetings automatically. Walk into every event ready.'
+  },
+  {
+    icon: Mail,
+    title: 'Automated Campaigns',
+    description: 'From a scanned business card to a personalized email sequence in clicks, not hours. Lexi builds the outreach so you can focus on relationships.'
   },
   {
     icon: TrendingUp,
@@ -37,7 +47,7 @@ const currentFeatures = [
   {
     icon: Shield,
     title: 'Data Quality',
-    description: 'Automatically finds duplicate contacts using fuzzy name matching. One-click merge keeps your database clean without manual effort.'
+    description: 'Duplicate detection, fuzzy name matching, and one-click merge. Keeps your database clean without manual effort.'
   }
 ];
 
