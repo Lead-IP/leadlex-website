@@ -49,6 +49,10 @@
  */
 import AITransparency from './pages/AITransparency';
 import CompareClio from './pages/CompareClio';
+import CompareHubSpot from './pages/CompareHubSpot';
+import CompareInterAction from './pages/CompareInterAction';
+import CompareLawmatics from './pages/CompareLawmatics';
+import CompareNexl from './pages/CompareNexl';
 import LexiAI from './pages/LexiAI';
 import Contact from './pages/Contact';
 import DataProcessing from './pages/DataProcessing';
@@ -59,12 +63,20 @@ import Pricing from './pages/Pricing';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import TryLeadLex from './pages/TryLeadLex';
+import UseCaseAssociates from './pages/UseCaseAssociates';
+import UseCaseBD from './pages/UseCaseBD';
+import UseCaseManagement from './pages/UseCaseManagement';
+import UseCasePartners from './pages/UseCasePartners';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
     "AITransparency": AITransparency,
     "CompareClio": CompareClio,
+    "CompareHubSpot": CompareHubSpot,
+    "CompareInterAction": CompareInterAction,
+    "CompareLawmatics": CompareLawmatics,
+    "CompareNexl": CompareNexl,
     "Contact": Contact,
     "DataProcessing": DataProcessing,
     "FAQ": FAQ,
@@ -75,6 +87,10 @@ export const PAGES = {
     "Privacy": Privacy,
     "Terms": Terms,
     "TryLeadLex": TryLeadLex,
+    "UseCaseAssociates": UseCaseAssociates,
+    "UseCaseBD": UseCaseBD,
+    "UseCaseManagement": UseCaseManagement,
+    "UseCasePartners": UseCasePartners,
 }
 
 export const pagesConfig = {

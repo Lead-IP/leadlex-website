@@ -4,40 +4,40 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 import { Button } from '@/components/ui/button';
 import {
-  ArrowRight, Heart, Target, UserPlus, Copy, Sparkles, Search,
+  ArrowRight, Target, TrendingUp, Lightbulb, Search, Database, Shield, Sparkles,
   Clock, MessageSquare, Mail, Smartphone, Check, X
 } from 'lucide-react';
 
 const currentFeatures = [
   {
-    icon: Heart,
-    title: 'Relationship Intelligence',
-    description: 'Scores every contact 0–100 based on emails, meetings, notes. Shows who\'s warming up and who\'s going cold.'
-  },
-  {
     icon: Target,
     title: 'Proactive Prospecting',
-    description: 'Recommends who to contact today based on deal activity, relationship decay, and interaction history.'
+    description: 'Recommends who to contact today based on deal activity, relationship decay, and interaction history. Never miss a follow-up again.'
   },
   {
-    icon: UserPlus,
-    title: 'Contact Enrichment',
-    description: 'Enriches contact and company data automatically with LinkedIn profiles and business information.'
+    icon: TrendingUp,
+    title: 'Relationship Intelligence',
+    description: 'Scores every contact 0-100 based on meetings, emails, notes, and deals. See who\'s warming up and who\'s going cold at a glance.'
   },
   {
-    icon: Copy,
-    title: 'Duplicate Detection',
-    description: 'Finds duplicate contacts using fuzzy name matching and exact email/phone matching. One-click merge.'
-  },
-  {
-    icon: Sparkles,
+    icon: Lightbulb,
     title: 'Smart Insights',
-    description: 'Context-aware AI suggestions on every page. Ask Lexi about any contact, deal, or company.'
+    description: 'Context-aware AI analysis on every page. Ask Lexi about any contact, deal, company, or pipeline and get actionable recommendations.'
   },
   {
     icon: Search,
     title: 'AI Prospector',
-    description: 'Search 250M+ contacts and companies for conference prep, roadshows, or relationship refreshes.'
+    description: 'Search 250M+ contacts and companies for conference prep, roadshows, or refreshing dormant relationships.'
+  },
+  {
+    icon: Database,
+    title: 'Contact Enrichment',
+    description: 'Profiles enriched automatically with LinkedIn data, company information, and business context.'
+  },
+  {
+    icon: Shield,
+    title: 'Data Quality',
+    description: 'Automatically finds duplicate contacts using fuzzy name matching. One-click merge keeps your database clean without manual effort.'
   }
 ];
 
@@ -48,14 +48,14 @@ const roadmapFeatures = [
     description: 'Daily summary of your tasks, meetings, and pipeline changes'
   },
   {
-    icon: MessageSquare,
-    title: 'Microsoft Teams Integration',
-    description: 'Message Lexi directly in Teams'
-  },
-  {
     icon: Mail,
     title: 'Campaign Co-pilot',
     description: 'Lexi helps write and optimize your email campaigns'
+  },
+  {
+    icon: MessageSquare,
+    title: 'Microsoft Teams Integration',
+    description: 'Message Lexi directly in Teams'
   },
   {
     icon: Smartphone,

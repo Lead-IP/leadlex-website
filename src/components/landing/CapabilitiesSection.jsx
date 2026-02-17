@@ -12,16 +12,16 @@ import {
 
 const capabilities = [
 {
+  icon: Target,
+  title: 'AI-Powered Insights',
+  description: 'Lexi AI flags dormant mandates, suggests next best actions, and enriches contact information. Quietly supportive.',
+  visual: 'ai'
+},
+{
   icon: LayoutGrid,
   title: 'Mandate Pipelines',
   description: 'Separate Hunting pipelines for new mandates and Farming pipelines for key-client growth. Track opportunities in one clear view.',
   visual: 'pipeline'
-},
-{
-  icon: Zap,
-  title: 'Fast, Frictionless Capture',
-  description: 'Log mandates, meeting notes, and follow-ups in under a minute. Three-field quick add ensures real adoption by partners.',
-  visual: 'capture'
 },
 {
   icon: Users,
@@ -36,10 +36,10 @@ const capabilities = [
   visual: 'prospector'
 },
 {
-  icon: Target,
-  title: 'AI-Powered Insights',
-  description: 'Lexi AI flags dormant mandates, suggests next best actions, and enriches contact information. Quietly supportive.',
-  visual: 'ai'
+  icon: Zap,
+  title: 'Fast, Frictionless Capture',
+  description: 'Log mandates, meeting notes, and follow-ups in under a minute. Three-field quick add ensures real adoption by partners.',
+  visual: 'capture'
 },
 {
   icon: Calendar,

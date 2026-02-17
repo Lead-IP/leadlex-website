@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Bell, Lightbulb, Database, Search, Users, BarChart3 } from 'lucide-react';
+import { Sparkles, Lightbulb, Database, Search, BarChart3, Target } from 'lucide-react';
 
 const aiFeatures = [
   {
-    icon: Search,
-    title: 'AI Prospector',
-    description: 'Search 250M+ contacts and companies for conference prep, roadshows, and relationship refreshes'
+    icon: Target,
+    title: 'Proactive outreach suggestions',
+    description: 'Recommends who to contact today based on relationship health and deal activity'
   },
   {
-    icon: Bell,
-    title: 'Flags dormant mandates',
-    description: 'Automatic alerts when client relationships go quiet'
+    icon: BarChart3,
+    title: 'Relationship intelligence',
+    description: 'Tracks relationship health across your network. Flags contacts going cold before you lose them'
   },
   {
     icon: Lightbulb,
@@ -19,19 +19,14 @@ const aiFeatures = [
     description: 'Clear, actionable recommendations based on context'
   },
   {
+    icon: Search,
+    title: 'AI Prospector',
+    description: 'Search 250M+ contacts and companies for conference prep, roadshows, and relationship refreshes'
+  },
+  {
     icon: Database,
     title: 'Enriches information',
     description: 'Contact and company data enhanced automatically'
-  },
-  {
-    icon: Users,
-    title: 'Prepares your meetings',
-    description: 'Contact history, deal context, and talking points ready before every meeting'
-  },
-  {
-    icon: BarChart3,
-    title: 'Keeps you informed',
-    description: 'Stay on top of tasks, meetings, pipeline changes, and relationships that need attention'
   }
 ];
 
