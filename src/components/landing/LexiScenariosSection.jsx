@@ -6,8 +6,8 @@ const scenarios = [
   {
     icon: Clock,
     time: 'Morning',
-    message: '"Good morning. You have 2 meetings today. The BMW deal hasn\'t moved in 8 days -- want me to draft a follow-up?"',
-    caption: 'Lexi briefs you every morning with what matters.'
+    message: '"The BMW deal hasn\'t moved in 8 days and the relationship is cooling. Want me to help you draft a follow-up?"',
+    caption: 'Lexi flags what needs your attention before it\'s too late.'
   },
   {
     icon: Calendar,

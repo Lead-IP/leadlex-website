@@ -30,8 +30,8 @@ const aiFeatures = [
   },
   {
     icon: BarChart3,
-    title: 'Morning briefings',
-    description: 'Start each day knowing your tasks, meetings, pipeline changes, and what needs attention'
+    title: 'Keeps you informed',
+    description: 'Stay on top of tasks, meetings, pipeline changes, and relationships that need attention'
   }
 ];
 

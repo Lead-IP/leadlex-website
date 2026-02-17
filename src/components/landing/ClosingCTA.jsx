@@ -5,9 +5,9 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 import ContactDialog from '../ContactDialog';
 
 const benefits = [
-  'Set up in 5 minutes',
-  'Works in Teams & WhatsApp',
-  'Lexi included free'
+  'Pipeline visibility from day one',
+  'AI-powered relationship insights',
+  'Lexi included in every plan'
 ];
 
 export default function ClosingCTA() {
@@ -49,7 +49,7 @@ export default function ClosingCTA() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg text-white/70 leading-relaxed mb-10 max-w-2xl mx-auto"
             >
-              Free to start. No credit card. No implementation project. Lexi handles your onboarding in 5 minutes.
+              Get started in minutes. Lexi guides you through setup and starts working on your contacts immediately.
             </motion.p>
             
             <motion.div

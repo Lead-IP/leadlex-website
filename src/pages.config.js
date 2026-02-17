@@ -48,6 +48,8 @@
  * The mainPage value must match a key in the PAGES object exactly.
  */
 import AITransparency from './pages/AITransparency';
+import CompareClio from './pages/CompareClio';
+import LexiAI from './pages/LexiAI';
 import Contact from './pages/Contact';
 import DataProcessing from './pages/DataProcessing';
 import FAQ from './pages/FAQ';
@@ -62,10 +64,12 @@ import __Layout from './Layout.jsx';
 
 export const PAGES = {
     "AITransparency": AITransparency,
+    "CompareClio": CompareClio,
     "Contact": Contact,
     "DataProcessing": DataProcessing,
     "FAQ": FAQ,
     "Home": Home,
+    "LexiAI": LexiAI,
     "LinkedInBanner": LinkedInBanner,
     "Pricing": Pricing,
     "Privacy": Privacy,

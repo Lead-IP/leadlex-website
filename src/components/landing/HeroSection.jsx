@@ -136,7 +136,7 @@ export default function HeroSection() {
           <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">Lexi manages your contacts, prepares your meetings, builds your campaigns, and keeps your pipeline healthy. She works in your CRM, in Microsoft Teams, and on WhatsApp — so you can focus on practicing law.
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-xl">Lexi manages your contacts, prepares your meetings, builds your campaigns, and keeps your pipeline healthy. An AI team member built into your CRM — so you can focus on practicing law.
 
 
 
@@ -163,7 +163,7 @@ export default function HeroSection() {
                 className="border-white/30 text-white hover:bg-white/10 font-medium px-8 py-6 text-base rounded-xl transition-all duration-300 bg-transparent"
                 asChild>
 
-              <a href="#lexi-ai">Talk to Lexi</a>
+              <a href="#how-it-works">See How It Works</a>
             </Button>
           </motion.div>
 
