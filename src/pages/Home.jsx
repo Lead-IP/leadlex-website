@@ -1,15 +1,19 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 import HeroSection from '../components/landing/HeroSection';
+import USPStripSection from '../components/landing/USPStripSection';
 import LexiScenariosSection from '../components/landing/LexiScenariosSection';
+import TrustSection from '../components/landing/TrustSection';
+import FAQSection from '../components/landing/FAQSection';
+import ClosingCTA from '../components/landing/ClosingCTA';
+
+// Kept for potential use on other pages (not rendered on homepage)
 import ProblemSection from '../components/landing/ProblemSection';
 import CapabilitiesSection from '../components/landing/CapabilitiesSection';
 import HowItWorksSection from '../components/landing/HowItWorksSection';
 import AISection from '../components/landing/AISection';
 import SecuritySection from '../components/landing/SecuritySection';
 import TestimonialsSection from '../components/landing/TestimonialsSection';
-import FAQSection from '../components/landing/FAQSection';
-import ClosingCTA from '../components/landing/ClosingCTA';
 
 export default function Home() {
   return (
@@ -56,19 +60,9 @@ export default function Home() {
         }}
       />
       <HeroSection />
+      <USPStripSection />
       <LexiScenariosSection />
-      <ProblemSection />
-      <div id="features">
-        <CapabilitiesSection />
-      </div>
-      <div id="how-it-works">
-        <HowItWorksSection />
-      </div>
-      <AISection />
-      <div id="security">
-        <SecuritySection />
-      </div>
-      <TestimonialsSection />
+      <TrustSection />
       <FAQSection />
       <ClosingCTA />
     </div>

@@ -39,6 +39,30 @@ const faqs = [
   {
     question: 'Is LeadLex GDPR compliant?',
     answer: 'Yes. LeadLex is built under German GDPR standards, operates with a formal Data Processing Agreement, and ensures strict data separation between firms.'
+  },
+  {
+    question: 'What can Lexi actually do?',
+    answer: 'Lexi manages your pipeline, flags dormant deals, preps conference briefings, drafts follow-up emails, enriches contacts from 250M+ database, runs multi-channel campaigns, and tracks relationship health across your network. She works inside your CRM and through WhatsApp or Microsoft Teams.'
+  },
+  {
+    question: 'What is Mandate Pipelines?',
+    answer: 'Separate pipelines for new business (Hunting) and existing client growth (Farming). Track every opportunity from first contact to closed mandate in one clear view.'
+  },
+  {
+    question: 'How does Event & Conference Mode work?',
+    answer: 'Import attendee lists, find warm connections in your network, prioritize who to meet, scan business cards on-site, and auto-generate follow-ups after. One workflow from prep to close.'
+  },
+  {
+    question: 'What is the AI Prospector?',
+    answer: 'Search over 250 million contacts and companies. Find decision-makers for conference prep, roadshows, or refreshing old relationships. Get emails, LinkedIn profiles, and company data instantly.'
+  },
+  {
+    question: 'How does relationship intelligence work?',
+    answer: 'Lexi tracks every interaction across your network and calculates relationship health scores. She flags contacts going cold before you lose them and suggests the best time to re-engage.'
+  },
+  {
+    question: 'Can Lexi send emails and run campaigns?',
+    answer: 'Yes. Build personalized email sequences from templates or let Lexi draft them. From scanned business card to automated nurture campaign in a few clicks.'
   }
 ];
 

@@ -7,19 +7,19 @@ const scenarios = [
     icon: Clock,
     time: 'Morning',
     message: '"The BMW deal hasn\'t moved in 8 days and the relationship is cooling. Want me to help you draft a follow-up?"',
-    caption: 'Lexi flags what needs your attention before it\'s too late.'
+    caption: 'Flags what needs attention'
   },
   {
     icon: Calendar,
     time: 'After a Meeting',
     message: '"How did the meeting with Sarah go? I found 3 action items from your notes. Create follow-up tasks?"',
-    caption: 'Lexi turns meetings into momentum.'
+    caption: 'Turns meetings into action items'
   },
   {
     icon: BarChart3,
     time: 'End of Week',
     message: '"This week: 2 deals progressed, 3 new contacts added, pipeline up 12%. Nice work."',
-    caption: 'Lexi tracks your progress so you don\'t have to.'
+    caption: 'Tracks progress automatically'
   }
 ];
 
@@ -80,16 +80,6 @@ export default function LexiScenariosSection() {
             </motion.div>
           ))}
         </div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-10 text-[#033934] font-medium"
-        >
-          Lexi is not a chatbot. She's a team member who manages your business development 24/7.
-        </motion.p>
       </div>
     </section>
   );
