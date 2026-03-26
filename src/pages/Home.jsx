@@ -62,6 +62,9 @@ export default function Home() {
       <HeroSection />
       <USPStripSection />
       <LexiScenariosSection />
+      <div id="how-it-works">
+        <HowItWorksSection />
+      </div>
       <TrustSection />
       <FAQSection />
       <ClosingCTA />
